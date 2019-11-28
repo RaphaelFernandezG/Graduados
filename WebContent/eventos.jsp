@@ -23,27 +23,27 @@
         <div class="navbar-fixed">
             <nav class="nav-extended red darken-4 ">
               <div class="nav-wrapper red darken-2 navbar-fixed">
-                <a id="logouno" href="index.html" class="brand-logo flow-text truncate"><i id="marghea"
+                <a id="logouno" href="index.jsp" class="brand-logo flow-text truncate"><i id="marghea"
                     class="material-icons">school</i>Graduados
                   ING. SISTEMAS</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                  <li><a id="ext" href="https://ww2.ufps.edu.co/">Página UFPS</a></li>
+                  <li><a id="ext" href="https://ww2.ufps.edu.co/">Pagina UFPS</a></li>
                   <li><a id="ext" href="https://ingsistemas.cloud.ufps.edu.co/index.php">Pagina de Sistemas</a></li>
-                  <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.html"><i
+                  <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.jsp"><i
                         class="material-icons right">person</i>INGRESAR</a></li>
                 </ul>
               </div>
               <div class="nav-content red-darken-4 hide-on-med-and-down">
                 <ul class="red-darken-4 hide-on-med-and-down">
-                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="ofertaslabs.html"
+                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="ofertaslabs.jsp"
                       data-target="ofertas">OFERTA
                       LABORAL</a></li>
-                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="experiencias.html"
+                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="experiencias.jsp"
                       data-target="encuestas">EXPERIENCIAS</a></li>
-                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="eventos.html">EVENTOS</a>
+                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="eventos.jsp">EVENTOS</a>
                   </li>
-                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="noticias.html">NOTICIAS</a>
+                  <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="noticias.jsp">NOTICIAS</a>
                   </li>
                   <li class="tab"><a class="dropdown-trigger waves-effect waves-black tooltipped" href=""
                       data-position="bottom"
@@ -54,29 +54,29 @@
           </div>
       
           <ul id="ofertas" class="dropdown-content red darken-2">
-            <li><a id="lin" href="ofertaslabs.html">Ofertas del Programa</a></li>
+            <li><a id="lin" href="ofertaslabs.jsp">Ofertas del Programa</a></li>
             <li><a id="lin" href="http://tutrabajo.ufps.trabajando.com.co/">TuTrabajo</a></li>
           </ul>
       
       
           <!--BARRA LATERAL: SIDENAV-->
           <ul class="sidenav red darken-4" id="mobile-demo">
-            <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.html"><i
+            <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.jsp"><i
                   class="material-icons right">person</i>INGRESAR</a></li>
             <li>
               <div class="divider"></div>
             </li>
             <li><a class="subheader">Sitios Institucionales</a></li>
-            <li><a id="ext" href="https://ww2.ufps.edu.co/"><i class="material-icons">web</i>Página UFPS</a></li>
+            <li><a id="ext" href="https://ww2.ufps.edu.co/"><i class="material-icons">web</i>Pagina UFPS</a></li>
             <li><a id="ext" href="https://ingsistemas.cloud.ufps.edu.co/index.php"><i class="material-icons">web</i>Pagina de Sistemas</a></li>
             <li>
               <div class="divider"></div>
             </li>
-            <li><a class="subheader">Interés de Graduados</a></li>
-            <li><a id="ext" href="ofertaslabs.html"><i class="material-icons">work</i>Ofertas Laborales</a></li>
-            <li><a id="ext" href="eventos.html"><i class="material-icons">question_answer</i>Eventos</a></li>
-            <li><a id="ext" href="noticias.html"><i class="material-icons">view_carousel</i>Noticias</a></li>
-            <li><a id="ext" href="experiencias.html"><i class="material-icons">card_membership</i>Experiencias</a></li>
+            <li><a class="subheader">Interes de Graduados</a></li>
+            <li><a id="ext" href="ofertaslabs.jsp"><i class="material-icons">work</i>Ofertas Laborales</a></li>
+            <li><a id="ext" href="eventos.jsp"><i class="material-icons">question_answer</i>Eventos</a></li>
+            <li><a id="ext" href="noticias.jsp"><i class="material-icons">view_carousel</i>Noticias</a></li>
+            <li><a id="ext" href="experiencias.jsp"><i class="material-icons">card_membership</i>Experiencias</a></li>
           </ul>
     </header>
 
@@ -84,24 +84,24 @@
         <div class="container">
             <br>
             <br>
-            <h2 class="valign-wrapper"> NOTICIAS</h2>
+            <h2 class="valign-wrapper"> EVENTOS</h2>
             <div class="divider"></div>
             <div class="section">
-                <h5>Noticia 1</h5>
+                <h5>Evento 1</h5>
                 <p>Decripcion</p>
             </div>
             
             <div class="divider"></div>
             
             <div class="section">
-                <h5>Noticia 2</h5>
+                <h5>Evento 2</h5>
                 <p>Decripcion</p>
             </div>
             
             <div class="divider"></div>
             
             <div class="section">
-                <h5>Noticia 3</h5>
+                <h5>Evento 3</h5>
                 <p>Decripcion</p>
             </div>
             <br>
@@ -116,7 +116,7 @@
                     <img class="responsive-img" src="resources/logo_horizontal.png" width="400">
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Enlaces de Interés</h5>
+                    <h5 class="white-text">Enlaces de Interes</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="#!">Grupo de Facebook</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Biblioteca Eduardo Cote Lamus</a></li>
@@ -127,7 +127,7 @@
         </div>
         <div class="footer-copyright red darken-4">
             <div class="container">
-                2019 © All Rights Reserved. Desarrollado por:
+                2019 � All Rights Reserved. Desarrollado por:
                 <a class="grey-text text-lighten-4 right" href="#!">Social media</a>
 
             </div>

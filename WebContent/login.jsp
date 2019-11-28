@@ -21,7 +21,7 @@
         <div class="navbar-fixed">
             <nav class="nav-extended red darken-4 ">
                 <div class="nav-wrapper red darken-2 navbar-fixed">
-                    <a id="logouno" href="index.html" class="brand-logo flow-text truncate"><i id="marghea"
+                    <a id="logouno" href="index.jsp" class="brand-logo flow-text truncate"><i id="marghea"
                             class="material-icons">school</i>Graduados
                         ING. SISTEMAS</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>

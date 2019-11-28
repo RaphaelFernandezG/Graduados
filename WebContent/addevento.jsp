@@ -26,7 +26,7 @@
         <div class="navbar-fixed">
                 <nav class="nav-extended red darken-4 ">
                   <div class="nav-wrapper red darken-2 navbar-fixed">
-                    <a id="logouno" href="index.html" class="brand-logo flow-text truncate"><i id="marghea"
+                    <a id="logouno" href="index.jsp" class="brand-logo flow-text truncate"><i id="marghea"
                         class="material-icons">school</i>Graduados
                       ING. SISTEMAS</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -36,24 +36,24 @@
                       <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="" data-target="cargas">CARGAR DATOS</a></li>
                     </ul>
                         <ul id="cargas" class="dropdown-content red darken-2">
-                                <li><a id="lin" href="admin.html">INICIO</a></li>
-                                <li><a id="lin" href="addnoticia.html">agregar noticia</a></li>
-                                <li><a id="lin" href="addgraduado.html">registrar graduado</a></li>
-                                <li><a id="lin" href="addevento.html">agregar evento</a></li>
-                                <li><a id="lin" href="addexperiencia.html">agregar experiencia</a></li>
-                                <li><a id="lin" href="addofertalab.html">agregar experiencia</a></li>
+                                <li><a id="lin" href="admin.jsp">INICIO</a></li>
+                                <li><a id="lin" href="addnoticia.jsp">agregar noticia</a></li>
+                                <li><a id="lin" href="addgraduado.jsp">registrar graduado</a></li>
+                                <li><a id="lin" href="addevento.jsp">agregar evento</a></li>
+                                <li><a id="lin" href="addexperiencia.jsp">agregar experiencia</a></li>
+                                <li><a id="lin" href="addofertalab.jsp">agregar experiencia</a></li>
                         </ul>
                   </div>
                   <div class="nav-content red-darken-4 hide-on-med-and-down">
                     <ul class="red-darken-4 hide-on-med-and-down">
-                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="ofertaslabs.html"
+                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="ofertaslabs.jsp"
                           data-target="ofertas">OFERTA
                           LABORAL</a></li>
-                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="experiencias.html"
+                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="experiencias.jsp"
                           data-target="encuestas">EXPERIENCIAS</a></li>
-                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="eventos.html">EVENTOS</a>
+                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="eventos.jsp">EVENTOS</a>
                       </li>
-                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="noticias.html">NOTICIAS</a>
+                      <li class="tab"><a class="dropdown-trigger waves-effect waves-black" href="noticias.jsp">NOTICIAS</a>
                       </li>
                       <li class="tab"><a class="dropdown-trigger waves-effect waves-black tooltipped" href=""
                           data-position="bottom"
@@ -64,14 +64,14 @@
               </div>
           
               <ul id="ofertas" class="dropdown-content red darken-2">
-                <li><a id="lin" href="ofertaslabs.html">Ofertas del Programa</a></li>
+                <li><a id="lin" href="ofertaslabs.jsp">Ofertas del Programa</a></li>
                 <li><a id="lin" href="http://tutrabajo.ufps.trabajando.com.co/">TuTrabajo</a></li>
               </ul>
           
           
               <!--BARRA LATERAL: SIDENAV-->
               <ul class="sidenav red darken-4" id="mobile-demo">
-                <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.html"><i
+                <li><a id="login" class="waves-effect waves-light btn grey lighten-5" href="login.jsp"><i
                       class="material-icons right">person</i>INGRESAR</a></li>
                 <li>
                   <div class="divider"></div>
@@ -83,10 +83,10 @@
                   <div class="divider"></div>
                 </li>
                 <li><a class="subheader">Interes de Graduados</a></li>
-                <li><a id="ext" href="ofertaslabs.html"><i class="material-icons">work</i>Ofertas Laborales</a></li>
-                <li><a id="ext" href="eventos.html"><i class="material-icons">question_answer</i>Eventos</a></li>
-                <li><a id="ext" href="noticias.html"><i class="material-icons">view_carousel</i>Noticias</a></li>
-                <li><a id="ext" href="experiencias.html"><i class="material-icons">card_membership</i>Experiencias</a></li>
+                <li><a id="ext" href="ofertaslabs.jsp"><i class="material-icons">work</i>Ofertas Laborales</a></li>
+                <li><a id="ext" href="eventos.jsp"><i class="material-icons">question_answer</i>Eventos</a></li>
+                <li><a id="ext" href="noticias.jsp"><i class="material-icons">view_carousel</i>Noticias</a></li>
+                <li><a id="ext" href="experiencias.jsp"><i class="material-icons">card_membership</i>Experiencias</a></li>
               </ul>
     </header>
 
