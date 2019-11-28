@@ -1,0 +1,234 @@
+html,
+body {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  height: 100%;
+}
+
+
+body {
+  display: block;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.block {
+  height: 100%;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #d50000;
+}
+
+.slider .indicators {
+  bottom: 50px;
+  z-index: 2;
+}
+
+.slider {
+  margin-top: 60px;
+  margin-bottom: -25px;
+}
+
+nav #logouno,
+#ext {
+  font-weight: thin;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: white;
+}
+
+#logodos {
+  font-size: 1.5rem;
+  margin-left: 15px;
+}
+
+#lin:hover {
+  background-color: #d32f2f93;
+}
+
+#lin {
+  font-size: 0.8rem;
+}
+
+#marghea {
+  margin-left: 10px;
+}
+
+#login {
+  color: #d50000;
+}
+
+.parallax-container {
+  height: 500px;
+
+}
+
+.input-field .prefix.active {
+  color: #d50000;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: 1px solid #d50000;
+    -webkit-box-shadow: 0 1px 0 0 #26a69a;
+    box-shadow: 0 1px 0 0 #d50000;
+}
+
+.dropdown-content li:hover,
+.dropdown-content li.active {
+  background-color: #b71c1c;
+}
+
+.dropdown-content {
+  background-color: #d32f2f;
+}
+
+.tabs.tabs-transparent {
+  background-color: #b71c1c;
+}
+
+
+.mg {
+  margin-top: 50px;
+}
+
+
+.iwrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.rotateb {
+  transform: rotateY(0deg);
+  z-index: 3;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+/*ESTILOS DEL LOGIN*/
+
+h5
+{
+	font-weight: 400;
+}
+
+#formulario
+{
+  margin-top: 20px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 468px) {
+  /* Aquí van todos los estilos CSS */
+  #formulario{
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.tabs #formulario
+{
+	height: 60px;
+}
+
+.form-container
+{
+	padding: 40px;
+	padding-top: 10px;
+}
+
+.confirmation-tabs-btn
+{
+	position: absolute;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: #c62828 !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #c62828 !important;
+  box-shadow: 0 1px 0 0 #c62828  !important
+}
+
+#titulologin{
+  color: #c62828;
+}
+
+
+
+/*VERTICAL SLIDER*/
+
+
+#simple-vertical {
+  width: 100%;
+  color: #FFF;
+}
+.blockSample {
+  left: 20px; 
+  top: 20px; 
+  padding: 6px 8px; 
+  background: #FFF; 
+  color:#000;
+}
+
+#cargar{
+  margin: 3px;
+}
+
+
+#gradest{
+ padding: 2px;
+}
+
+/*FECHAS*/
+.datepicker-date-display, .datepicker-table td.is-selected{
+  background-color: #b71c1c ;
+}
+
+.datepicker-table td.is-today, .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
+  color: #b71c1c;
+}
+
+#descri.active{
+  color: #b71c1c;
+}
+
+#btnupload{
+  background-color: #b71c1c;
+}
