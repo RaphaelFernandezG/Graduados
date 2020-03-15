@@ -7,4 +7,5 @@ public class EventoprinDao extends Conexion<Eventoprin> implements GenericDao<Ev
 	
 	public EventoprinDao() {
 		super(Eventoprin.class);
-	}}
+		}
+}

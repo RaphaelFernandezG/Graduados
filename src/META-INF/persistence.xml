@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="Graduados" transaction-type="RESOURCE_LOCAL">
-		<class>graduado.entities.Administrador</class>
-		<class>graduado.entities.Evento</class>
-		<class>graduado.entities.Eventoprin</class>
-		<class>graduado.entities.Expdest</class>
-		<class>graduado.entities.Experiencia</class>
-		<class>graduado.entities.Graddestacado</class>
-		<class>graduado.entities.Graduado</class>
-		<class>graduado.entities.Noticia</class>
-		<class>graduado.entities.Notide</class>
-		<class>graduado.entities.Ofertalab</class>
+	    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+	    <class>graduado.entities.Administrador</class>
+	    <class>graduado.entities.Evento</class>
+	    <class>graduado.entities.Eventoprin</class>
+	    <class>graduado.entities.Expdest</class>
+	    <class>graduado.entities.Experiencia</class>
+	    <class>graduado.entities.Graddestacado</class>
+	    <class>graduado.entities.Graduado</class>
+	    <class>graduado.entities.Noticia</class>
+	    <class>graduado.entities.Notidest</class>
+	    <class>graduado.entities.Ofertala</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/wbz4rVu4M6"/>
-			<property name="javax.persistence.jdbc.user" value="wbz4rVu4M6"/>
-			<property name="javax.persistence.jdbc.password" value="y2TjVAvQwQ"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/> <!-- DB Dialect -->
 			<property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" />
-            <property name="eclipselink.exclude-eclipselink-orm" value="false"/>
-            <property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/4MNmhjnxOi"/>
+            <property name="javax.persistence.jdbc.user" value="4MNmhjnxOi"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="I8lityMlDe"/>
 		</properties>
 	</persistence-unit>
 </persistence>

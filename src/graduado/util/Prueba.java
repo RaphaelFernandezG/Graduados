@@ -3,7 +3,7 @@ package graduado.util;
 import graduado.entities.Administrador;
 import graduado.entities.Evento;
 import graduado.entities.Eventoprin;
-import graduado.entities.Ofertalab;
+import graduado.entities.Ofertala;
 import graduado.model.AdministradorDao;
 import graduado.model.EventoDao;
 import graduado.model.EventoprinDao;
@@ -67,7 +67,7 @@ public class Prueba {
 		}*/
 		
 		
-		String id_eve = "EV2";
+		/*String id_eve = "EV2";
 		String nombre = "Rueda de Negocios";
 		String ciudad = "Cucuta";
 		String lugar = "UFPS, Posgrados";
@@ -86,7 +86,7 @@ public class Prueba {
 		/*eDao.insert(e);*/
 		
 		
-		String id_evef = e.getIdEve();
+		/*String id_evef = e.getIdEve();
 		String id_eveprin = "EVP1";
 		String descripcion = "Primera edicion";
 		

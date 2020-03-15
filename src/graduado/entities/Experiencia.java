@@ -15,9 +15,15 @@ public class Experiencia implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private String link;
+	private String id;
 
 	private String descripcion;
+
+	private String link;
+
+	//bi-directional one-to-one association to Expdest
+	@OneToOne(mappedBy="experiencia")
+	private Expdest expdest;
 
 	//bi-directional many-to-one association to Graduado
 	@ManyToOne
@@ -25,6 +31,22 @@ public class Experiencia implements Serializable {
 	private Graduado graduado;
 
 	public Experiencia() {
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return this.descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	public String getLink() {
@@ -35,12 +57,12 @@ public class Experiencia implements Serializable {
 		this.link = link;
 	}
 
-	public String getDescripcion() {
-		return this.descripcion;
+	public Expdest getExpdest() {
+		return this.expdest;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setExpdest(Expdest expdest) {
+		this.expdest = expdest;
 	}
 
 	public Graduado getGraduado() {

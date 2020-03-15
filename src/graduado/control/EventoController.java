@@ -61,7 +61,7 @@ public class EventoController extends HttpServlet {
 		try {
 			ini = (Date)parseDate.parse(fechaini);
 			fin = (Date)parseDate.parse(fechafin);
-			e.setIdEve(id_eve);
+			e.setId(id_eve);
 			e.setNombre(nombre);
 			e.setCiudad(ciudad);
 			e.setLugar(lugar);
