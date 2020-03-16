@@ -9,7 +9,7 @@ Username: 3HSWlcsrfg
 
 Database name: 3HSWlcsrfg
 
-Password: ##4nRzvxU8Li##
+Password: <!-- 4nRzvxU8Li -->
 
 Server: remotemysql.com
 
