@@ -145,9 +145,7 @@
 
 
 	<!--CONTENIDO-->
-	<main> 
-	
-	<!--EVENTOS SLIDER-->
+	<main> <!--EVENTOS SLIDER-->
 	<h2 class="center-align">EVENTOS</h2>
 	<div class="carousel">
 
@@ -224,48 +222,48 @@
 	<div class="divider"></div>
 
 	<!--EXPERIENCIAS VIDEOS-->
-    <h2 class="center-align">EXPERIENCIAS</h2>
-    <div class="container row">
-      <div class="col s8 l8">
-        <div class="video-container">
-        <c:forEach var="e" begin="0" end="0" items="${experienciaDao.list()}">
-			<tr>
-				<td><iframe width="853" height="480" src="${e.link}" frameborder="0"
-            		allowfullscreen></iframe>
-            	</td>
-			</tr>
-		</c:forEach>	
-        </div>
-      </div>
-      <div class="col s4 l4 ">
-        <ul class="collection ">
-          <li class="collection-item ">
-            <div class="video-container">
-              <c:forEach var="e" begin="1" end="1" items="${experienciaDao.list()}">
-			<tr>
-				<td><iframe width="853" height="480" src="${e.link}" frameborder="0"
-            		allowfullscreen></iframe>
-            	</td>
-			</tr>
-		</c:forEach>
-            </div>
-          </li>
-          <div>
-            <li class="collection-item ">
-              <div class="video-container">
-                <c:forEach var="e" begin="2" end="2" items="${experienciaDao.list()}">
-			<tr>
-				<td><iframe width="853" height="480" src="${e.link}" frameborder="0"
-            		allowfullscreen></iframe>
-            	</td>
-			</tr>
-		</c:forEach>
-              </div>
-            </li>
-          </div>
-        </ul>
-      </div>
-    </div>
+	<h2 class="center-align">EXPERIENCIAS</h2>
+	<div class="container row">
+		<div class="col s8 l8">
+			<div class="video-container">
+				<c:forEach var="e" begin="0" end="0"
+					items="${experienciaDao.list()}">
+					<tr>
+						<td><iframe width="853" height="480" src="${e.link}"
+								frameborder="0" allowfullscreen></iframe></td>
+					</tr>
+				</c:forEach>
+			</div>
+		</div>
+		<div class="col s4 l4 ">
+			<ul class="collection ">
+				<li class="collection-item ">
+					<div class="video-container">
+						<c:forEach var="e" begin="1" end="1"
+							items="${experienciaDao.list()}">
+							<tr>
+								<td><iframe width="853" height="480" src="${e.link}"
+										frameborder="0" allowfullscreen></iframe></td>
+							</tr>
+						</c:forEach>
+					</div>
+				</li>
+				<div>
+					<li class="collection-item ">
+						<div class="video-container">
+							<c:forEach var="e" begin="2" end="2"
+								items="${experienciaDao.list()}">
+								<tr>
+									<td><iframe width="853" height="480" src="${e.link}"
+											frameborder="0" allowfullscreen></iframe></td>
+								</tr>
+							</c:forEach>
+						</div>
+					</li>
+				</div>
+			</ul>
+		</div>
+	</div>
 
 	<div class="divider"></div>
 
