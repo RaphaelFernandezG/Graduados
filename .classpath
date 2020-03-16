@@ -17,10 +17,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Sajor Razimalliv/Documents/Universidad/Librerias/activation-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sajor Razimalliv/Documents/Universidad/Librerias/javax.mail-1.6.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sajor Razimalliv/Documents/Universidad/Librerias/javax.servlet-5.1.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sajor Razimalliv/Documents/Universidad/Librerias/javax.servlet-api-4.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sajor Razimalliv/Documents/Universidad/Librerias/mysql-connector-java-5.1.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
