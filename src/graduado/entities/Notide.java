@@ -5,13 +5,13 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the notidest database table.
+ * The persistent class for the notides database table.
  * 
  */
 @Entity
-@Table(name="notidest")
-@NamedQuery(name="Notidest.findAll", query="SELECT n FROM Notidest n")
-public class Notidest implements Serializable {
+@Table(name="notides")
+@NamedQuery(name="Notide.findAll", query="SELECT n FROM Notide n")
+public class Notide implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -25,7 +25,7 @@ public class Notidest implements Serializable {
 	@JoinColumn(name="id_notides")
 	private Noticia noticia;
 
-	public Notidest() {
+	public Notide() {
 	}
 
 	public String getIdNotides() {

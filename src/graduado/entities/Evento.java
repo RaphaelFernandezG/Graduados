@@ -2,6 +2,7 @@ package graduado.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -15,7 +16,8 @@ public class Evento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private String id;
+	@Column(name="id_eve")
+	private String idEve;
 
 	private String ciudad;
 
@@ -27,19 +29,19 @@ public class Evento implements Serializable {
 
 	private String nombre;
 
-	//bi-directional one-to-one association to Eventoprin
-	@OneToOne(mappedBy="evento")
-	private Eventoprin eventoprin;
+	//bi-directional many-to-one association to Eventoprin
+	@OneToMany(mappedBy="evento")
+	private List<Eventoprin> eventoprins;
 
 	public Evento() {
 	}
 
-	public String getId() {
-		return this.id;
+	public String getIdEve() {
+		return this.idEve;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setIdEve(String idEve) {
+		this.idEve = idEve;
 	}
 
 	public String getCiudad() {
@@ -82,12 +84,26 @@ public class Evento implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public Eventoprin getEventoprin() {
-		return this.eventoprin;
+	public List<Eventoprin> getEventoprins() {
+		return this.eventoprins;
 	}
 
-	public void setEventoprin(Eventoprin eventoprin) {
-		this.eventoprin = eventoprin;
+	public void setEventoprins(List<Eventoprin> eventoprins) {
+		this.eventoprins = eventoprins;
+	}
+
+	public Eventoprin addEventoprin(Eventoprin eventoprin) {
+		getEventoprins().add(eventoprin);
+		eventoprin.setEvento(this);
+
+		return eventoprin;
+	}
+
+	public Eventoprin removeEventoprin(Eventoprin eventoprin) {
+		getEventoprins().remove(eventoprin);
+		eventoprin.setEvento(null);
+
+		return eventoprin;
 	}
 
 }

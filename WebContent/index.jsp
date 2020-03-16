@@ -27,8 +27,6 @@
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="evenDao" class="graduado.model.EventoDao"
 		scope="request"></jsp:useBean>
-	<jsp:useBean id="evenprin" class="graduado.entities.Eventoprin"
-		scope="request"></jsp:useBean>
 	<jsp:useBean id="experienciaDao" class="graduado.model.ExperienciaDao"
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="expdestDao" class="graduado.model.ExpdestDao"

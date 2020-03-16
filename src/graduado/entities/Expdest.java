@@ -15,34 +15,23 @@ public class Expdest implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="id_expdest")
-	private String idExpdest;
+	@Column(name="id_dest")
+	private String idDest;
 
-	@Column(name="link_expdest")
-	private String linkExpdest;
-
-	//bi-directional one-to-one association to Experiencia
-	@OneToOne
-	@JoinColumn(name="id_expdest")
+	//bi-directional many-to-one association to Experiencia
+	@ManyToOne
+	@JoinColumn(name="link_dest")
 	private Experiencia experiencia;
 
 	public Expdest() {
 	}
 
-	public String getIdExpdest() {
-		return this.idExpdest;
+	public String getIdDest() {
+		return this.idDest;
 	}
 
-	public void setIdExpdest(String idExpdest) {
-		this.idExpdest = idExpdest;
-	}
-
-	public String getLinkExpdest() {
-		return this.linkExpdest;
-	}
-
-	public void setLinkExpdest(String linkExpdest) {
-		this.linkExpdest = linkExpdest;
+	public void setIdDest(String idDest) {
+		this.idDest = idDest;
 	}
 
 	public Experiencia getExperiencia() {

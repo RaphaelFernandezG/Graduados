@@ -3,7 +3,7 @@ package graduado.util;
 import graduado.entities.Administrador;
 import graduado.entities.Evento;
 import graduado.entities.Eventoprin;
-import graduado.entities.Ofertala;
+import graduado.entities.Ofertalab;
 import graduado.model.AdministradorDao;
 import graduado.model.EventoDao;
 import graduado.model.EventoprinDao;
