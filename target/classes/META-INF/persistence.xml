@@ -19,7 +19,7 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/3HSWlcsrfg"/>
             <property name="javax.persistence.jdbc.user" value="3HSWlcsrfg"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value="4nRzvxU8Li"/>
+            <property name="javax.persistence.jdbc.password" value="cilNEQqgsX"/>
 		</properties>
 	</persistence-unit>
 </persistence>
