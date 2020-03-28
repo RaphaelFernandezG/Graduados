@@ -10,16 +10,16 @@
 	    <class>graduado.entities.Graddestacado</class>
 	    <class>graduado.entities.Graduado</class>
 	    <class>graduado.entities.Noticia</class>
-	    <class>graduado.entities.Notidest</class>
-	    <class>graduado.entities.Ofertala</class>
+	    <class>graduado.entities.Notide</class>
+	    <class>graduado.entities.Ofertalab</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/> <!-- DB Dialect -->
 			<property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/4MNmhjnxOi"/>
-            <property name="javax.persistence.jdbc.user" value="4MNmhjnxOi"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/3HSWlcsrfg"/>
+            <property name="javax.persistence.jdbc.user" value="3HSWlcsrfg"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value="I8lityMlDe"/>
+            <property name="javax.persistence.jdbc.password" value="cilNEQqgsX"/>
 		</properties>
 	</persistence-unit>
 </persistence>

@@ -5,18 +5,17 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the ofertala database table.
+ * The persistent class for the ofertalab database table.
  * 
  */
 @Entity
-@Table(name="ofertala")
-@NamedQuery(name="Ofertala.findAll", query="SELECT o FROM Ofertala o")
-public class Ofertala implements Serializable {
+@Table(name="ofertalab")
+@NamedQuery(name="Ofertalab.findAll", query="SELECT o FROM Ofertalab o")
+public class Ofertalab implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="id_ofertalab")
-	private String idOfertalab;
+	private String id;
 
 	private String cargo;
 
@@ -26,15 +25,15 @@ public class Ofertala implements Serializable {
 
 	private String salario;
 
-	public Ofertala() {
+	public Ofertalab() {
 	}
 
-	public String getIdOfertalab() {
-		return this.idOfertalab;
+	public String getId() {
+		return this.id;
 	}
 
-	public void setIdOfertalab(String idOfertalab) {
-		this.idOfertalab = idOfertalab;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getCargo() {

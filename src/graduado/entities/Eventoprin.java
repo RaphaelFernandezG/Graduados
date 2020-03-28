@@ -19,9 +19,9 @@ public class Eventoprin implements Serializable {
 
 	private String descripcion;
 
-	//bi-directional one-to-one association to Evento
-	@OneToOne
-	@JoinColumn(name="id")
+	//bi-directional many-to-one association to Evento
+	@ManyToOne
+	@JoinColumn(name="id_eveprin")
 	private Evento evento;
 
 	public Eventoprin() {

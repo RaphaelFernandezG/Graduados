@@ -1,11 +1,11 @@
 package graduado.model;
 
-import graduado.entities.Notidest;
+import graduado.entities.Notide;
 import graduado.util.Conexion;
 
-public class NotidestDao extends Conexion<Notidest> implements GenericDao<Notidest> {
+public class NotidestDao extends Conexion<Notide> implements GenericDao<Notide> {
 	
 	public NotidestDao() {
-		super(Notidest.class);
+		super(Notide.class);
 	}
 }

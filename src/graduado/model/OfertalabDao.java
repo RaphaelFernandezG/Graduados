@@ -1,11 +1,11 @@
 package graduado.model;
 
-import graduado.entities.Ofertala;
+import graduado.entities.Ofertalab;
 import graduado.util.Conexion;
 
-public class OfertalabDao extends Conexion<Ofertala> implements GenericDao<Ofertala> {
+public class OfertalabDao extends Conexion<Ofertalab> implements GenericDao<Ofertalab> {
 	
 	public OfertalabDao() {
-		super(Ofertala.class);
+		super(Ofertalab.class);
 	}
 }

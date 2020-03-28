@@ -25,9 +25,9 @@ public class Noticia implements Serializable {
 
 	private String lugar;
 
-	//bi-directional one-to-one association to Notidest
+	//bi-directional one-to-one association to Notide
 	@OneToOne(mappedBy="noticia")
-	private Notidest notidest;
+	private Notide notide;
 
 	public Noticia() {
 	}
@@ -72,12 +72,12 @@ public class Noticia implements Serializable {
 		this.lugar = lugar;
 	}
 
-	public Notidest getNotidest() {
-		return this.notidest;
+	public Notide getNotide() {
+		return this.notide;
 	}
 
-	public void setNotidest(Notidest notidest) {
-		this.notidest = notidest;
+	public void setNotide(Notide notide) {
+		this.notide = notide;
 	}
 
 }
