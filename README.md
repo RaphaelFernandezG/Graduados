@@ -3,14 +3,13 @@
 Portal Graduados UFPS https://graduado.herokuapp.com/index.jsp
 
 
-DB: https://remotemysql.com/phpmyadmin/index.php?db=3HSWlcsrfg
+DB: 
 
-Username: 3HSWlcsrfg
+Username: 
 
-Database name: 3HSWlcsrfg
+Database name: 
 
-Password: <!-- cilNEQqgsX -->
-
+Password: 
 Server: remotemysql.com
 
 Port: 3306
