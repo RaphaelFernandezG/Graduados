@@ -9,9 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Graduados | UFPS Ing. de Sistemas</title>
-<link rel="shortcut icon"
-	href="http://200.93.148.29/ingsistemas_viejo/images/imagenesArticulos/ing_sistemas.png"
-	type="image/x-icon">
+<link rel="shortcut icon" href="resources/icon.png" type="image/x-icon">
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -114,288 +112,240 @@
 	<!--SLIDER PRINCIPAL-->
 	<div class="slider" style="margin-top: 18px;">
 		<ul class="slides">
-			<li><img src="resources/slider1.jpg"> <!-- random image -->
-				<div class="caption center-align">
-					<h3>This is our big Tagline!</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
-			<li><img src="resources/slider2.jpg"> <!-- random image -->
-				<div class="caption left-align">
-					<h3>Left Aligned Caption</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
-				</div></li>
-			<li><img src="resources/slider3.jpg"> <!-- random image -->
+			<li><img src="resources/encasa.jpeg"> <!-- random image -->
 				<div class="caption right-align">
-					<h3>Right Aligned Caption</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
+					<h3>NOTICIA 1</h3>
+					<h5 class="light grey-text text-lighten-3">Titulo de la
+						noticia 1</h5>
 				</div></li>
-			<li><img src="resources/slider4.jpg"> <!-- random image -->
-				<div class="caption center-align">
-					<h3>This is our big Tagline!</h3>
-					<h5 class="light grey-text text-lighten-3">Here's our small
-						slogan.</h5>
+			<li><img src="resources/saberpro.jpg"> <!-- random image -->
+				<div class="caption right-align">
+					<h3>NOTICIA 2</h3>
+					<h5 class="light grey-text text-lighten-3">Titulo de la
+						noticia 2</h5>
+				</div></li>
+			<li><img src="resources/virtual.jpg"> <!-- random image -->
+				<div class="caption right-align">
+					<h3>NOTICIA 3</h3>
+					<h5 class="light grey-text text-lighten-3">Titulo de la
+						noticia 3</h5>
+				</div></li>
+			<li><img src="resources/reto.jpg"> <!-- random image -->
+				<div class="caption right-align">
+					<h3>NOTICIA 4</h3>
+					<h5 class="light grey-text text-lighten-3">Titulo de la
+						noticia 4</h5>
 				</div></li>
 		</ul>
 	</div>
 
-
 	<!--CONTENIDO-->
-	<main> <!--EVENTOS SLIDER-->
-	<h2 class="center-align">EVENTOS</h2>
-	<div class="carousel">
+		
+		<!--EVENTOS SLIDER-->
+		<h2 class="center-align">EVENTOS</h2>
+		<div class="carousel">
 
-		<div id="two" class="carousel-item row valign-wrapper">
-			<div class="col s10">
-				<img class="responsive-img" width="350"
-					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+			<div id="two" class="carousel-item row valign-wrapper">
+				<div class="col s10">
+					<img class="responsive-img" width="350"
+						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+				</div>
+				<div class="col s2">
+					<a class="black-text" href="">
+						<h6 class="center flow-text ">
+							<c:forEach var="n" begin="0" end="0" items="${evenDao.list()}">
+								<tr>
+									<td><c:out value="${n.nombre}" /></td>
+								</tr>
+							</c:forEach>
+						</h6>
+					</a>
+				</div>
 			</div>
-			<div class="col s2">
-				<a class="black-text" href="">
-					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="0" end="0" items="${evenDao.list()}">
-							<tr>
-								<td><c:out value="${n.nombre}" /></td>
-							</tr>
-						</c:forEach>
-					</h6>
-				</a>
+			<div id="two" class="carousel-item row valign-wrapper">
+				<div class="col s10">
+					<img class="responsive-img" width="350"
+						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+				</div>
+				<div class="col s2">
+					<a class="black-text" href="">
+						<h6 class="center flow-text ">
+							<c:forEach var="n" begin="1" end="1" items="${evenDao.list()}">
+								<tr>
+									<td><c:out value="${n.nombre}" /></td>
+								</tr>
+							</c:forEach>
+						</h6>
+					</a>
+				</div>
+			</div>
+			<div id="two" class="carousel-item row valign-wrapper">
+				<div class="col s10">
+					<img class="responsive-img" width="350"
+						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+				</div>
+				<div class="col s2">
+					<a class="black-text" href="">
+						<h6 class="center flow-text ">
+							<c:forEach var="n" begin="2" end="2" items="${evenDao.list()}">
+								<tr>
+									<td><c:out value="${n.nombre}" /></td>
+								</tr>
+							</c:forEach>
+						</h6>
+					</a>
+				</div>
+			</div>
+			<div id="two" class="carousel-item row valign-wrapper">
+				<div class="col s10">
+					<img class="responsive-img" width="350"
+						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+				</div>
+				<div class="col s2">
+					<a class="black-text" href="">
+						<h6 class="center flow-text ">
+							<c:forEach var="n" begin="3" end="3" items="${evenDao.list()}">
+								<tr>
+									<td><c:out value="${n.nombre}" /></td>
+								</tr>
+							</c:forEach>
+						</h6>
+					</a>
+				</div>
 			</div>
 		</div>
-		<div id="two" class="carousel-item row valign-wrapper">
-			<div class="col s10">
-				<img class="responsive-img" width="350"
-					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-			</div>
-			<div class="col s2">
-				<a class="black-text" href="">
-					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="1" end="1" items="${evenDao.list()}">
-							<tr>
-								<td><c:out value="${n.nombre}" /></td>
-							</tr>
-						</c:forEach>
-					</h6>
-				</a>
-			</div>
-		</div>
-		<div id="two" class="carousel-item row valign-wrapper">
-			<div class="col s10">
-				<img class="responsive-img" width="350"
-					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-			</div>
-			<div class="col s2">
-				<a class="black-text" href="">
-					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="2" end="2" items="${evenDao.list()}">
-							<tr>
-								<td><c:out value="${n.nombre}" /></td>
-							</tr>
-						</c:forEach>
-					</h6>
-				</a>
-			</div>
-		</div>
-		<div id="two" class="carousel-item row valign-wrapper">
-			<div class="col s10">
-				<img class="responsive-img" width="350"
-					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-			</div>
-			<div class="col s2">
-				<a class="black-text" href="">
-					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="3" end="3" items="${evenDao.list()}">
-							<tr>
-								<td><c:out value="${n.nombre}" /></td>
-							</tr>
-						</c:forEach>
-					</h6>
-				</a>
-			</div>
-		</div>
-	</div>
 
-	<div class="divider"></div>
+		<div class="divider"></div>
 
-	<!--EXPERIENCIAS VIDEOS-->
-	<h2 class="center-align">EXPERIENCIAS</h2>
-	<div class="container row">
-		<div class="col s8 l8">
-			<div class="video-container">
-				<c:forEach var="e" begin="0" end="0"
-					items="${experienciaDao.list()}">
-					<tr>
-						<td><iframe width="853" height="480" src="${e.link}"
-								frameborder="0" allowfullscreen></iframe></td>
-					</tr>
-				</c:forEach>
+		<!--EXPERIENCIAS VIDEOS-->
+		<h2 class="center-align">EXPERIENCIAS</h2>
+		<div class="container row">
+			<div class="col s8 l8">
+				<div class="video-container">
+					<c:forEach var="e" begin="0" end="0"
+						items="${experienciaDao.list()}">
+						<tr>
+							<td><iframe width="853" height="480" src="${e.link}"
+									frameborder="0" allowfullscreen></iframe></td>
+						</tr>
+					</c:forEach>
+				</div>
 			</div>
-		</div>
-		<div class="col s4 l4 ">
-			<ul class="collection ">
-				<li class="collection-item ">
-					<div class="video-container">
-						<c:forEach var="e" begin="1" end="1"
-							items="${experienciaDao.list()}">
-							<tr>
-								<td><iframe width="853" height="480" src="${e.link}"
-										frameborder="0" allowfullscreen></iframe></td>
-							</tr>
-						</c:forEach>
-					</div>
-				</li>
-				<div>
+			<div class="col s4 l4 ">
+				<ul class="collection ">
 					<li class="collection-item ">
 						<div class="video-container">
-							<c:forEach var="e" begin="2" end="2"
+							<c:forEach var="e" begin="1" end="1"
 								items="${experienciaDao.list()}">
 								<tr>
-									<td><iframe width="853" height="480" src="${e.link}"
-											frameborder="0" allowfullscreen></iframe></td>
-								</tr>
+								<td><iframe width="560" height="315"
+										src="https://www.youtube.com/watch?v=LYdCzs5uPrI"></iframe></td>
+							</tr>
 							</c:forEach>
 						</div>
 					</li>
-				</div>
-			</ul>
-		</div>
-	</div>
-
-	<div class="divider"></div>
-
-	<!--NOTICIAS-->
-	<h2 class="center-align">NOTICIAS</h2>
-	<div class="carousel">
-		<div class="carousel-item row valign-wrapper">
-			<div class="col s12">
-				<div class="card">
-					<div class="card-image">
-						<img src="https://picsum.photos/id/896/412/310">
+					<div>
+						<li class="collection-item ">
+							<div class="video-container">
+								<c:forEach var="e" begin="2" end="2"
+									items="${experienciaDao.list()}">
+									<tr>
+										<td><iframe width="853" height="480" src="${e.link}"
+												frameborder="0" allowfullscreen></iframe></td>
+									</tr>
+								</c:forEach>
+							</div>
+						</li>
 					</div>
-					<div class="card-content">
-						<p class="flow-text truncate">Tirtulo de la noticia</p>
-					</div>
-
-				</div>
-
+				</ul>
 			</div>
 		</div>
-		<div class="carousel-item row valign-wrapper">
-			<div class="col s12">
-				<div class="card">
-					<div class="card-image">
-						<img src="https://picsum.photos/id/896/412/310">
-					</div>
-					<div class="card-content">
-						<p class="flow-text truncate">Tirtulo de la noticia</p>
-					</div>
 
+		<div class="divider"></div>
+
+		<!--GRADUADO DESTACADO-->
+		<h2 class="center-align">GRADUADOS DESTACADOS</h2>
+		<div class="container row">
+			<div id="gradest" class="col l3 card card-panel hoverable">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="https://picsum.photos/id/291/412/310">
 				</div>
-
-			</div>
-		</div>
-		<div class="carousel-item row valign-wrapper">
-			<div class="col s12">
-				<div class="card">
-					<div class="card-image">
-						<img src="https://picsum.photos/id/896/412/310">
-					</div>
-					<div class="card-content">
-						<p class="flow-text truncate">Tirtulo de la noticia</p>
-					</div>
-
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Nombre
+						del graduado<i class="material-icons right">more_vert</i>
+					</span>
+					<p>Año de graduado</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"><i
+						class="material-icons right">close</i>Card Title</span>
+					<p>Descripcion del graduado</p>
 				</div>
 			</div>
-		</div>
-	</div>
+			<div id="gradest" class="col l3 card card-panel hoverable">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="https://picsum.photos/id/291/412/310">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Nombre
+						del graduado<i class="material-icons right">more_vert</i>
+					</span>
+					<p>Año de graduado</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"><i
+						class="material-icons right">close</i>Card Title</span>
+					<p>Descripcion del graduado</p>
+				</div>
+			</div>
+			<div id="gradest" class="col l3 card card-panel hoverable">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="https://picsum.photos/id/291/412/310">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Nombre
+						del graduado<i class="material-icons right">more_vert</i>
+					</span>
+					<p>Año de graduado</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"><i
+						class="material-icons right">close</i>Card Title</span>
+					<p>Descripcion del graduado</p>
+				</div>
+			</div>
 
-	<div class="divider"></div>
-
-	<!--GRADUADO DESTACADO-->
-	<h2 class="center-align">GRADUADOS DESTACADOS</h2>
-	<div class="container row">
-		<div id="gradest" class="col l3 card card-panel hoverable">
-			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
-			</div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">Nombre
-					del graduado<i class="material-icons right">more_vert</i>
-				</span>
-				<p>Año de graduado</p>
-			</div>
-			<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4"><i
-					class="material-icons right">close</i>Card Title</span>
-				<p>Descripcion del graduado</p>
-			</div>
-		</div>
-		<div id="gradest" class="col l3 card card-panel hoverable">
-			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
-			</div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">Nombre
-					del graduado<i class="material-icons right">more_vert</i>
-				</span>
-				<p>Año de graduado</p>
-			</div>
-			<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4"><i
-					class="material-icons right">close</i>Card Title</span>
-				<p>Descripcion del graduado</p>
-			</div>
-		</div>
-		<div id="gradest" class="col l3 card card-panel hoverable">
-			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
-			</div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">Nombre
-					del graduado<i class="material-icons right">more_vert</i>
-				</span>
-				<p>Año de graduado</p>
-			</div>
-			<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4"><i
-					class="material-icons right">close</i>Card Title</span>
-				<p>Descripcion del graduado</p>
+			<div id="gradest" class="col l3 card card-panel hoverable">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="https://picsum.photos/id/291/412/310">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Nombre
+						del graduado<i class="material-icons right">more_vert</i>
+					</span>
+					<p>Año de graduado</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4"><i
+						class="material-icons right">close</i>Card Title</span>
+					<p>Descripcion del graduado</p>
+				</div>
 			</div>
 		</div>
 
-		<div id="gradest" class="col l3 card card-panel hoverable">
-			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
-			</div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">Nombre
-					del graduado<i class="material-icons right">more_vert</i>
-				</span>
-				<p>Año de graduado</p>
-			</div>
-			<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4"><i
-					class="material-icons right">close</i>Card Title</span>
-				<p>Descripcion del graduado</p>
+		<div class="divider"></div>
+
+		<!--LOCALIZACION-->
+		<h2 class="center-align">EN EL MUNDO</h2>
+
+		<div class="container row">
+			<div class="video-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d24195.183065081445!2d-74.0223669993167!3d40.70925674645445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20Nueva%20York%2C%20EE.%20UU.!3m2!1d40.7127753!2d-74.0059728!4m0!5e0!3m2!1ses-419!2sco!4v1574608245870!5m2!1ses-419!2sco"
+					width="853" height="480" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
-	</div>
-
-	<div class="divider"></div>
-
-	<!--LOCALIZACIÓN-->
-	<h2 class="center-align">EN EL MUNDO</h2>
-
-	<div class="container row">
-		<div class="video-container">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d24195.183065081445!2d-74.0223669993167!3d40.70925674645445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20Nueva%20York%2C%20EE.%20UU.!3m2!1d40.7127753!2d-74.0059728!4m0!5e0!3m2!1ses-419!2sco!4v1574608245870!5m2!1ses-419!2sco"
-				width="853" height="480" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
-	</main>
+	
 
 
 	<!--PIE DE PAGINA-->
