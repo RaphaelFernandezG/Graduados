@@ -29,6 +29,14 @@
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="expdestDao" class="graduado.model.ExpdestDao"
 		scope="request"></jsp:useBean>
+	<jsp:useBean id="notiDao" class="graduado.model.NoticiaDao"
+		scope="request"></jsp:useBean>
+	<jsp:useBean id="notidestDao" class="graduado.model.NotidestDao"
+		scope="request"></jsp:useBean>
+	<jsp:useBean id="graDao" class="graduado.model.GraduadoDao"
+		scope="request"></jsp:useBean>
+	<jsp:useBean id="gradestDao" class="graduado.model.GraddestacadoDao"
+		scope="request"></jsp:useBean>
 
 	<header>
 		<!--ENCABEZADO GENERAL-->
@@ -114,238 +122,322 @@
 		<ul class="slides">
 			<li><img src="resources/encasa.jpeg"> <!-- random image -->
 				<div class="caption right-align">
-					<h3>NOTICIA 1</h3>
-					<h5 class="light grey-text text-lighten-3">Titulo de la
-						noticia 1</h5>
+					<c:forEach var="noti" begin="0" end="0"
+						items="${notidestDao.list()}">
+						<tr>
+							<td>
+								<h3>${noti.titular}</h3> <c:forEach var="n" begin="0" end="0"
+									items="${notiDao.list()}">
+									<tr>
+										<td>
+											<h5 class="light grey-text text-lighten-3">${n.descripcion}</h5>
+										</td>
+									</tr>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
 				</div></li>
 			<li><img src="resources/saberpro.jpg"> <!-- random image -->
 				<div class="caption right-align">
-					<h3>NOTICIA 2</h3>
-					<h5 class="light grey-text text-lighten-3">Titulo de la
-						noticia 2</h5>
+					<c:forEach var="noti" begin="1" end="1"
+						items="${notidestDao.list()}">
+						<tr>
+							<td>
+								<h3>${noti.titular}</h3> <c:forEach var="n" begin="0" end="0"
+									items="${notiDao.list()}">
+									<tr>
+										<td>
+											<h5 class="light grey-text text-lighten-3">${n.descripcion}</h5>
+										</td>
+									</tr>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
 				</div></li>
 			<li><img src="resources/virtual.jpg"> <!-- random image -->
 				<div class="caption right-align">
-					<h3>NOTICIA 3</h3>
-					<h5 class="light grey-text text-lighten-3">Titulo de la
-						noticia 3</h5>
+					<c:forEach var="noti" begin="2" end="2"
+						items="${notidestDao.list()}">
+						<tr>
+							<td>
+								<h3>${noti.titular}</h3> <c:forEach var="n" begin="0" end="0"
+									items="${notiDao.list()}">
+									<tr>
+										<td>
+											<h5 class="light grey-text text-lighten-3">${n.descripcion}</h5>
+										</td>
+									</tr>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
 				</div></li>
 			<li><img src="resources/reto.jpg"> <!-- random image -->
 				<div class="caption right-align">
-					<h3>NOTICIA 4</h3>
-					<h5 class="light grey-text text-lighten-3">Titulo de la
-						noticia 4</h5>
+					<c:forEach var="noti" begin="3" end="3"
+						items="${notidestDao.list()}">
+						<tr>
+							<td>
+								<h3>${noti.titular}</h3> <c:forEach var="n" begin="0" end="0"
+									items="${notiDao.list()}">
+									<tr>
+										<td>
+											<h5 class="light grey-text text-lighten-3">${n.descripcion}</h5>
+										</td>
+									</tr>
+								</c:forEach>
+							</td>
+						</tr>
+					</c:forEach>
 				</div></li>
 		</ul>
 	</div>
 
 	<!--CONTENIDO-->
-		
-		<!--EVENTOS SLIDER-->
-		<h2 class="center-align">EVENTOS</h2>
-		<div class="carousel">
 
-			<div id="two" class="carousel-item row valign-wrapper">
-				<div class="col s10">
-					<img class="responsive-img" width="350"
-						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-				</div>
-				<div class="col s2">
-					<a class="black-text" href="">
-						<h6 class="center flow-text ">
-							<c:forEach var="n" begin="0" end="0" items="${evenDao.list()}">
-								<tr>
-									<td><c:out value="${n.nombre}" /></td>
-								</tr>
-							</c:forEach>
-						</h6>
-					</a>
-				</div>
-			</div>
-			<div id="two" class="carousel-item row valign-wrapper">
-				<div class="col s10">
-					<img class="responsive-img" width="350"
-						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-				</div>
-				<div class="col s2">
-					<a class="black-text" href="">
-						<h6 class="center flow-text ">
-							<c:forEach var="n" begin="1" end="1" items="${evenDao.list()}">
-								<tr>
-									<td><c:out value="${n.nombre}" /></td>
-								</tr>
-							</c:forEach>
-						</h6>
-					</a>
-				</div>
-			</div>
-			<div id="two" class="carousel-item row valign-wrapper">
-				<div class="col s10">
-					<img class="responsive-img" width="350"
-						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-				</div>
-				<div class="col s2">
-					<a class="black-text" href="">
-						<h6 class="center flow-text ">
-							<c:forEach var="n" begin="2" end="2" items="${evenDao.list()}">
-								<tr>
-									<td><c:out value="${n.nombre}" /></td>
-								</tr>
-							</c:forEach>
-						</h6>
-					</a>
-				</div>
-			</div>
-			<div id="two" class="carousel-item row valign-wrapper">
-				<div class="col s10">
-					<img class="responsive-img" width="350"
-						src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
-				</div>
-				<div class="col s2">
-					<a class="black-text" href="">
-						<h6 class="center flow-text ">
-							<c:forEach var="n" begin="3" end="3" items="${evenDao.list()}">
-								<tr>
-									<td><c:out value="${n.nombre}" /></td>
-								</tr>
-							</c:forEach>
-						</h6>
-					</a>
-				</div>
-			</div>
-		</div>
+	<!--EVENTOS SLIDER-->
+	<h2 class="center-align">EVENTOS</h2>
+	<div class="carousel">
 
-		<div class="divider"></div>
-
-		<!--EXPERIENCIAS VIDEOS-->
-		<h2 class="center-align">EXPERIENCIAS</h2>
-		<div class="container row">
-			<div class="col s8 l8">
-				<div class="video-container">
-					<c:forEach var="e" begin="0" end="0"
-						items="${experienciaDao.list()}">
-						<tr>
-							<td><iframe width="853" height="480" src="${e.link}"
-									frameborder="0" allowfullscreen></iframe></td>
-						</tr>
-					</c:forEach>
-				</div>
+		<div id="two" class="carousel-item row valign-wrapper">
+			<div class="col s10">
+				<img class="responsive-img" width="350"
+					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
 			</div>
-			<div class="col s4 l4 ">
-				<ul class="collection ">
-					<li class="collection-item ">
-						<div class="video-container">
-							<c:forEach var="e" begin="1" end="1"
-								items="${experienciaDao.list()}">
-								<tr>
-								<td><iframe width="560" height="315"
-										src="https://www.youtube.com/watch?v=LYdCzs5uPrI"></iframe></td>
+			<div class="col s2">
+				<a class="black-text" href="">
+					<h6 class="center flow-text ">
+						<c:forEach var="n" begin="0" end="0" items="${evenDao.list()}">
+							<tr>
+								<td><c:out value="${n.nombre}" /></td>
 							</tr>
-							</c:forEach>
+						</c:forEach>
+					</h6>
+				</a>
+			</div>
+		</div>
+		<div id="two" class="carousel-item row valign-wrapper">
+			<div class="col s10">
+				<img class="responsive-img" width="350"
+					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+			</div>
+			<div class="col s2">
+				<a class="black-text" href="">
+					<h6 class="center flow-text ">
+						<c:forEach var="n" begin="1" end="1" items="${evenDao.list()}">
+							<tr>
+								<td><c:out value="${n.nombre}" /></td>
+							</tr>
+						</c:forEach>
+					</h6>
+				</a>
+			</div>
+		</div>
+		<div id="two" class="carousel-item row valign-wrapper">
+			<div class="col s10">
+				<img class="responsive-img" width="350"
+					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+			</div>
+			<div class="col s2">
+				<a class="black-text" href="">
+					<h6 class="center flow-text ">
+						<c:forEach var="n" begin="2" end="2" items="${evenDao.list()}">
+							<tr>
+								<td><c:out value="${n.nombre}" /></td>
+							</tr>
+						</c:forEach>
+					</h6>
+				</a>
+			</div>
+		</div>
+		<div id="two" class="carousel-item row valign-wrapper">
+			<div class="col s10">
+				<img class="responsive-img" width="350"
+					src="https://ingsistemas.cloud.ufps.edu.co/rsc/img/logo_ingsistemas_vertical_invertido.png">
+			</div>
+			<div class="col s2">
+				<a class="black-text" href="">
+					<h6 class="center flow-text ">
+						<c:forEach var="n" begin="3" end="3" items="${evenDao.list()}">
+							<tr>
+								<td><c:out value="${n.nombre}" /></td>
+							</tr>
+						</c:forEach>
+					</h6>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<!--EXPERIENCIAS VIDEOS-->
+	<h2 class="center-align">EXPERIENCIAS</h2>
+	<div class="container row">
+		<div class="col s8 l8">
+			<c:forEach var="e" begin="0" end="0" items="${experienciaDao.list()}">
+				<tr>
+					<td>
+						<div class="video-container">
+							<iframe width="853" height="480" src="//${e.link}?rel=0"
+								frameborder="0" allowfullscreen></iframe>
 						</div>
-					</li>
-					<div>
-						<li class="collection-item ">
-							<div class="video-container">
-								<c:forEach var="e" begin="2" end="2"
-									items="${experienciaDao.list()}">
-									<tr>
-										<td><iframe width="853" height="480" src="${e.link}"
-												frameborder="0" allowfullscreen></iframe></td>
-									</tr>
-								</c:forEach>
-							</div>
-						</li>
-					</div>
-				</ul>
+					</td>
+				</tr>
+			</c:forEach>
+		</div>
+
+		<div class="col s4 l4 ">
+			<ul class="collection ">
+				<li class="collection-item "><c:forEach var="e" begin="1"
+						end="1" items="${experienciaDao.list()}">
+						<tr>
+							<td>
+								<div class="video-container">
+									<iframe width="853" height="480" src="//${e.link}?rel=0"
+										frameborder="0" allowfullscreen></iframe>
+								</div>
+							</td>
+						</tr>
+					</c:forEach></li>
+				<div>
+					<li class="collection-item "><c:forEach var="e" begin="2"
+							end="2" items="${experienciaDao.list()}">
+							<tr>
+								<td>
+									<div class="video-container">
+										<iframe width="853" height="480" src="//${e.link}?rel=0"
+											frameborder="0" allowfullscreen></iframe>
+									</div>
+								</td>
+							</tr>
+						</c:forEach></li>
+				</div>
+			</ul>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<!--GRADUADO DESTACADO-->
+	<h2 class="center-align">GRADUADOS DESTACADOS</h2>
+	<div class="container row">
+		<div id="gradest" class="col l3 card card-panel hoverable">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="https://picsum.photos/id/291/412/310">
+			</div>
+			<div class="card-content">
+				<c:forEach var="g" begin="0" end="0" items="${graDao.list()}">
+					<tr>
+						<td><span
+							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+								class="material-icons right">more_vert</i>
+						</span>
+							<p>${g.fechagrad}</p></td>
+					</tr>
+				</c:forEach>
+			</div>
+			<div class="card-reveal">
+				<c:forEach var="gd" begin="0" end="0" items="${gradestDao.list()}">
+					<tr>
+						<td><span class="card-title grey-text text-darken-4"><i
+								class="material-icons right">close</i>${gd.titulo}</span>
+							<p>${gd.descripcion}</p></td>
+					</tr>
+				</c:forEach>
+			</div>
+		</div>
+		<div id="gradest" class="col l3 card card-panel hoverable">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="https://picsum.photos/id/291/412/310">
+			</div>
+			<div class="card-content">
+				<c:forEach var="g" begin="1" end="1" items="${graDao.list()}">
+					<tr>
+						<td><span
+							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+								class="material-icons right">more_vert</i>
+						</span>
+							<p>${g.fechagrad}</p></td>
+					</tr>
+				</c:forEach>
+			</div>
+			<div class="card-reveal">
+				<c:forEach var="gd" begin="1" end="1" items="${gradestDao.list()}">
+					<tr>
+						<td><span class="card-title grey-text text-darken-4"><i
+								class="material-icons right">close</i>${gd.titulo}</span>
+							<p>${gd.descripcion}</p></td>
+					</tr>
+				</c:forEach>
+			</div>
+		</div>
+		<div id="gradest" class="col l3 card card-panel hoverable">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="https://picsum.photos/id/291/412/310">
+			</div>
+			<div class="card-content">
+				<c:forEach var="g" begin="2" end="2" items="${graDao.list()}">
+					<tr>
+						<td><span
+							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+								class="material-icons right">more_vert</i>
+						</span>
+							<p>${g.fechagrad}</p></td>
+					</tr>
+				</c:forEach>
+			</div>
+			<div class="card-reveal">
+				<c:forEach var="gd" begin="2" end="2" items="${gradestDao.list()}">
+					<tr>
+						<td><span class="card-title grey-text text-darken-4"><i
+								class="material-icons right">close</i>${gd.titulo}</span>
+							<p>${gd.descripcion}</p></td>
+					</tr>
+				</c:forEach>
 			</div>
 		</div>
 
-		<div class="divider"></div>
-
-		<!--GRADUADO DESTACADO-->
-		<h2 class="center-align">GRADUADOS DESTACADOS</h2>
-		<div class="container row">
-			<div id="gradest" class="col l3 card card-panel hoverable">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="https://picsum.photos/id/291/412/310">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Nombre
-						del graduado<i class="material-icons right">more_vert</i>
-					</span>
-					<p>Año de graduado</p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"><i
-						class="material-icons right">close</i>Card Title</span>
-					<p>Descripcion del graduado</p>
-				</div>
+		<div id="gradest" class="col l3 card card-panel hoverable">
+			<div class="card-image waves-effect waves-block waves-light">
+				<img class="activator" src="https://picsum.photos/id/291/412/310">
 			</div>
-			<div id="gradest" class="col l3 card card-panel hoverable">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="https://picsum.photos/id/291/412/310">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Nombre
-						del graduado<i class="material-icons right">more_vert</i>
-					</span>
-					<p>Año de graduado</p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"><i
-						class="material-icons right">close</i>Card Title</span>
-					<p>Descripcion del graduado</p>
-				</div>
+			<div class="card-content">
+				<c:forEach var="g" begin="3" end="3" items="${graDao.list()}">
+					<tr>
+						<td><span
+							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+								class="material-icons right">more_vert</i>
+						</span>
+							<p>${g.fechagrad}</p></td>
+					</tr>
+				</c:forEach>
 			</div>
-			<div id="gradest" class="col l3 card card-panel hoverable">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="https://picsum.photos/id/291/412/310">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Nombre
-						del graduado<i class="material-icons right">more_vert</i>
-					</span>
-					<p>Año de graduado</p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"><i
-						class="material-icons right">close</i>Card Title</span>
-					<p>Descripcion del graduado</p>
-				</div>
-			</div>
-
-			<div id="gradest" class="col l3 card card-panel hoverable">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="https://picsum.photos/id/291/412/310">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Nombre
-						del graduado<i class="material-icons right">more_vert</i>
-					</span>
-					<p>Año de graduado</p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"><i
-						class="material-icons right">close</i>Card Title</span>
-					<p>Descripcion del graduado</p>
-				</div>
+			<div class="card-reveal">
+				<c:forEach var="gd" begin="3" end="3" items="${gradestDao.list()}">
+					<tr>
+						<td><span class="card-title grey-text text-darken-4"><i
+								class="material-icons right">close</i>${gd.titulo}</span>
+							<p>${gd.descripcion}</p></td>
+					</tr>
+				</c:forEach>
 			</div>
 		</div>
+	</div>
 
-		<div class="divider"></div>
+	<div class="divider"></div>
 
-		<!--LOCALIZACION-->
-		<h2 class="center-align">EN EL MUNDO</h2>
+	<!--LOCALIZACION-->
+	<h2 class="center-align">EN EL MUNDO</h2>
 
-		<div class="container row">
-			<div class="video-container">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d24195.183065081445!2d-74.0223669993167!3d40.70925674645445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20Nueva%20York%2C%20EE.%20UU.!3m2!1d40.7127753!2d-74.0059728!4m0!5e0!3m2!1ses-419!2sco!4v1574608245870!5m2!1ses-419!2sco"
-					width="853" height="480" frameborder="0" allowfullscreen></iframe>
-			</div>
+	<div class="container row">
+		<div class="video-container">
+			<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1wMBBVb78vUSeMJjNADpYVXYwvGKG_oHr" width="640" height="480"></iframe>
 		</div>
-	
+	</div>
+
 
 
 	<!--PIE DE PAGINA-->
@@ -376,11 +468,17 @@
 
 			</div>
 		</div>
+
 	</footer>
+
 	<!-- Compiled and minified JavaScript -->
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+	<script
+		src="http://maps.google.com/maps/api/js?sensor=false&callback=iniciar"></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANjWsOk1P_2oAPY7lXYKxEVT8hGAgv4S8&callback=initMap"
+		type="text/javascript"></script>
 	<script src="js/funcion.js"></script>
 </body>
 
