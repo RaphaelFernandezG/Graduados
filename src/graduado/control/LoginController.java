@@ -19,49 +19,54 @@ import net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Assigner.D
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public LoginController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		Administrador admin = new Administrador();
 		AdministradorDao adminDao = new AdministradorDao();
-		
+
 		String text = request.getParameter("text");
 		String pass = request.getParameter("password");
-		
+		String id = "0";
+
 		admin.setUser(text);
 		admin.setPassword(pass);
-		
-		Administrador x = adminDao.find(admin.getUser());
-		
-		
-		if(admin.getUser().equals(x.getUser()) && admin.getPassword().equals(x.getPassword())) {
+		admin.setIdAdmin(id);
+
+		Administrador x = adminDao.find(admin.getIdAdmin());
+
+		if (admin.getPassword().equals(x.getPassword()) && admin.getUser().equals(x.getUser())) {
 			request.setAttribute("info", "Inicio de sesión correcto");
 			request.getRequestDispatcher("admin.jsp").forward(request, response);
-		}else if(admin.getUser() != x.getUser() || admin.getPassword() != x.getPassword()){
+		} else {
 			request.setAttribute("info", "Inicio de sesión incorrecto");
 			request.getRequestDispatcher("loginfail.jsp").forward(request, response);
 		}
-		
+
 	}
 
 }
