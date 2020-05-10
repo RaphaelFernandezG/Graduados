@@ -48,6 +48,10 @@ public class GraduadoController extends HttpServlet {
 		String telefono = request.getParameter("telefono");
 		String ciudad = request.getParameter("ciudad");
 		String direccion = request.getParameter("direccion");
+		String latitud = request.getParameter("latitud");
+		System.out.println("la latitud es" + latitud);	
+		String longitud = request.getParameter("lingitud");
+		System.out.println("la longitud es " + longitud);	
 		
 		Graduado gra = new Graduado();
 		gra.setApellidos(apellidos);
@@ -58,6 +62,8 @@ public class GraduadoController extends HttpServlet {
 		gra.setNombre(nombre);
 		gra.setNumdocum(numdocum);
 		gra.setTelefono(telefono);
+		gra.setLatitud(latitud);
+		gra.setLongitud(longitud);;
 		
 		GraduadoDao graDao = new GraduadoDao();
 		graDao.insert(gra);
