@@ -60,9 +60,9 @@ public class GraduadoController extends HttpServlet {
 		
 		
 		
-		String latitud = request.getParameter("latitud");
+		String latitud = request.getParameter("latitude");
 		System.out.println("la latitud es" + latitud);	
-		String longitud = request.getParameter("lingitud");
+		String longitud = request.getParameter("lingitude");
 		System.out.println("la longitud es " + longitud);	
 		
 		Graduado gra = new Graduado();
