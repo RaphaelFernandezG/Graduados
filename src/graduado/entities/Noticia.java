@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the noticia database table.
+ * The persistent class for the Noticia database table.
  * 
  */
 @Entity
-@Table(name="noticia")
 @NamedQuery(name="Noticia.findAll", query="SELECT n FROM Noticia n")
 public class Noticia implements Serializable {
 	private static final long serialVersionUID = 1L;

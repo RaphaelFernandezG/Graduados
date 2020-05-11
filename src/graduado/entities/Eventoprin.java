@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the eventoprin database table.
+ * The persistent class for the Eventoprin database table.
  * 
  */
 @Entity
-@Table(name="eventoprin")
 @NamedQuery(name="Eventoprin.findAll", query="SELECT e FROM Eventoprin e")
 public class Eventoprin implements Serializable {
 	private static final long serialVersionUID = 1L;

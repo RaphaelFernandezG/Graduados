@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the ofertalab database table.
+ * The persistent class for the Ofertalab database table.
  * 
  */
 @Entity
-@Table(name="ofertalab")
 @NamedQuery(name="Ofertalab.findAll", query="SELECT o FROM Ofertalab o")
 public class Ofertalab implements Serializable {
 	private static final long serialVersionUID = 1L;

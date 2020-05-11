@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the administrador database table.
+ * The persistent class for the Administrador database table.
  * 
  */
 @Entity

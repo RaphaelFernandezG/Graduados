@@ -5,11 +5,11 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the notides database table.
+ * The persistent class for the Notides database table.
  * 
  */
 @Entity
-@Table(name="notides")
+@Table(name="Notides")
 @NamedQuery(name="Notide.findAll", query="SELECT n FROM Notide n")
 public class Notide implements Serializable {
 	private static final long serialVersionUID = 1L;

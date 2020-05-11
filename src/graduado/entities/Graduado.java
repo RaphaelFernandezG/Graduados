@@ -6,11 +6,10 @@ import java.util.List;
 
 
 /**
- * The persistent class for the graduado database table.
+ * The persistent class for the Graduado database table.
  * 
  */
 @Entity
-@Table(name="graduado")
 @NamedQuery(name="Graduado.findAll", query="SELECT g FROM Graduado g")
 public class Graduado implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -28,13 +27,13 @@ public class Graduado implements Serializable {
 
 	private String fechagrad;
 
+	private String latitud;
+
+	private String longitud;
+
 	private String nombre;
 
 	private String telefono;
-	
-	private String latitud;
-	
-	private String longitud;
 
 	//bi-directional many-to-one association to Experiencia
 	@OneToMany(mappedBy="graduado")
@@ -53,22 +52,6 @@ public class Graduado implements Serializable {
 
 	public void setNumdocum(String numdocum) {
 		this.numdocum = numdocum;
-	}
-
-	public String getLatitud() {
-		return latitud;
-	}
-
-	public void setLatitud(String latitud) {
-		this.latitud = latitud;
-	}
-
-	public String getLongitud() {
-		return longitud;
-	}
-
-	public void setLongitud(String longitud) {
-		this.longitud = longitud;
 	}
 
 	public String getApellidos() {
@@ -109,6 +92,22 @@ public class Graduado implements Serializable {
 
 	public void setFechagrad(String fechagrad) {
 		this.fechagrad = fechagrad;
+	}
+
+	public String getLatitud() {
+		return this.latitud;
+	}
+
+	public void setLatitud(String latitud) {
+		this.latitud = latitud;
+	}
+
+	public String getLongitud() {
+		return this.longitud;
+	}
+
+	public void setLongitud(String longitud) {
+		this.longitud = longitud;
 	}
 
 	public String getNombre() {

@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the expdest database table.
+ * The persistent class for the Expdest database table.
  * 
  */
 @Entity
-@Table(name="expdest")
 @NamedQuery(name="Expdest.findAll", query="SELECT e FROM Expdest e")
 public class Expdest implements Serializable {
 	private static final long serialVersionUID = 1L;

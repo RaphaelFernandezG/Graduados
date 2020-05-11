@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import graduado.entities.Administrador;
 import graduado.model.AdministradorDao;
@@ -45,7 +46,9 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		
+		HttpSession session = request.getSession();
+		
 		Administrador admin = new Administrador();
 		AdministradorDao adminDao = new AdministradorDao();
 
@@ -60,6 +63,7 @@ public class LoginController extends HttpServlet {
 		Administrador x = adminDao.find(admin.getIdAdmin());
 
 		if (admin.getPassword().equals(x.getPassword()) && admin.getUser().equals(x.getUser())) {
+			session.setAttribute("text", text);
 			request.setAttribute("info", "Inicio de sesión correcto");
 			request.getRequestDispatcher("admin.jsp").forward(request, response);
 		} else {

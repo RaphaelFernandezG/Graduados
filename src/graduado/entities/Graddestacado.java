@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the graddestacado database table.
+ * The persistent class for the Graddestacado database table.
  * 
  */
 @Entity
-@Table(name="graddestacado")
 @NamedQuery(name="Graddestacado.findAll", query="SELECT g FROM Graddestacado g")
 public class Graddestacado implements Serializable {
 	private static final long serialVersionUID = 1L;

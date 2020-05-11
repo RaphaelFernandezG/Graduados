@@ -6,11 +6,10 @@ import java.util.List;
 
 
 /**
- * The persistent class for the experiencia database table.
+ * The persistent class for the Experiencia database table.
  * 
  */
 @Entity
-@Table(name="experiencia")
 @NamedQuery(name="Experiencia.findAll", query="SELECT e FROM Experiencia e")
 public class Experiencia implements Serializable {
 	private static final long serialVersionUID = 1L;
