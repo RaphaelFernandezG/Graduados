@@ -48,6 +48,18 @@ public class GraduadoController extends HttpServlet {
 		String telefono = request.getParameter("telefono");
 		String ciudad = request.getParameter("ciudad");
 		String direccion = request.getParameter("direccion");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		String latitud = request.getParameter("latitud");
 		System.out.println("la latitud es" + latitud);	
 		String longitud = request.getParameter("lingitud");
