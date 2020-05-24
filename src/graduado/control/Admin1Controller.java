@@ -9,27 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import graduado.entities.Evento;
-import graduado.entities.Eventoprin;
-import graduado.entities.Noticia;
-import graduado.entities.Notide;
-import graduado.model.EventoDao;
-import graduado.model.EventoprinDao;
 import graduado.model.NoticiaDao;
 import graduado.model.NotidestDao;
+import graduado.entities.Noticia;
+import graduado.entities.Notide;
 
 /**
- * Servlet implementation class AdminController
+ * Servlet implementation class Admin1Controller
  */
-@WebServlet("/AdminController")
-public class AdminController extends HttpServlet {
+@WebServlet("/Admin1Controller")
+public class Admin1Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AdminController() {
-        super();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Admin1Controller() {
+		super();
         // TODO Auto-generated constructor stub
     }
 
@@ -46,22 +42,21 @@ public class AdminController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Eventoprin eprin = new Eventoprin();
-		
-		String descripcion = request.getParameter("descri_eveprin");
-		String id_eveprin = request.getParameter("posevenprin");
-		String id_eve = request.getParameter("evenombre");
-		
-		EventoDao eDao = new EventoDao();
-		Evento e = eDao.find(id_eve);
-		
-		eprin.setDescripcion(descripcion);
-		eprin.setId(id_eveprin);
-		eprin.setEvento(e);
-		
-		EventoprinDao eprinDao = new EventoprinDao();
-		eprinDao.update(eprin);
-		
+		Notide ndes = new Notide();
+
+		String id_nd = request.getParameter("posnotides");
+		String id_noti = request.getParameter("notinombre");
+		String titular = request.getParameter("titular");
+
+		NoticiaDao nDao = new NoticiaDao();
+		Noticia n = nDao.find(id_noti);
+
+		ndes.setIdNd(id_nd);
+		ndes.setTitular(titular);
+		ndes.setNoticia(n);
+
+		NotidestDao notidesDao = new NotidestDao();
+		notidesDao.update(ndes);
 		RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
 		rd.forward(request, response);
 	}

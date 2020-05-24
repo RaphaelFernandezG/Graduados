@@ -13,9 +13,9 @@
 		<class>graduado.entities.Experiencia</class>
 		<class>graduado.entities.Graddestacado</class>
 		<class>graduado.entities.Graduado</class>
+		<class>graduado.entities.Ofertalab</class>
 		<class>graduado.entities.Noticia</class>
 		<class>graduado.entities.Notide</class>
-		<class>graduado.entities.Ofertalab</class>
 		<properties>
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQLDialect" /> <!-- DB Dialect -->
@@ -27,10 +27,7 @@
 				value="jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7339416" />
 			<property name="javax.persistence.jdbc.user"
 				value="sql7339416" />
-			<property name="javax.persistence.jdbc.password"
-				value="nNHahVhc9i" />
-			<property name="javax.persistence.jdbc.driver"
-				value="com.mysql.jdbc.Driver" />
-		</properties>
+			<property name="javax.persistence.jdbc.password" value="nNHahVhc9i"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/></properties>
 	</persistence-unit>
 </persistence>
