@@ -6,16 +6,8 @@
 	<persistence-unit name="Graduados"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>graduado.entities.Administrador</class>
-		<class>graduado.entities.Evento</class>
-		<class>graduado.entities.Eventoprin</class>
-		<class>graduado.entities.Expdest</class>
-		<class>graduado.entities.Experiencia</class>
-		<class>graduado.entities.Graddestacado</class>
-		<class>graduado.entities.Graduado</class>
-		<class>graduado.entities.Noticia</class>
-		<class>graduado.entities.Notide</class>
-		<class>graduado.entities.Ofertalab</class>
+		
+	
 		<properties>
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQLDialect" /> <!-- DB Dialect -->
@@ -23,14 +15,17 @@
 			<property name="hibernate.format_sql" value="true" />
 			<property name="eclipselink.jdbc.batch-writing"
 				value="Buffered" />
+			<property name="eclipselink.ddl-generation"
+				value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7339416" />
+				value="jdbc:mysql://sql10.freesqldatabase.com:3306/sql10347316" />
 			<property name="javax.persistence.jdbc.user"
-				value="sql7339416" />
-			<property name="javax.persistence.jdbc.password"
-				value="nNHahVhc9i" />
+				value="sql10347316" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.password" value="a1zFmzawg1"/>
 		</properties>
 	</persistence-unit>
 </persistence>

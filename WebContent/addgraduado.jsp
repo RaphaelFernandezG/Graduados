@@ -188,7 +188,56 @@
 
 
 
+						<button onclick="findMe()">Mostrar ubicación</button>
+						<div id="map"></div>
 
+						<script
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEevxL5GXYESYlQoNMFMZRaATP-l08YcM"></script>
+						<script>
+							function findMe() {
+								var output = document.getElementById('map');
+
+								// Verificar si soporta geolocalizacion
+								if (navigator.geolocation) {
+									output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
+								} else {
+									output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
+								}
+
+								//Obtenemos latitud y longitud
+								function localizacion(posicion) {
+
+									var latitude = posicion.coords.latitude;
+									System.out.println("la latitud es"
+											+ latitude);
+									var longitude = posicion.coords.longitude;
+									System.out.println("la latitud es"
+											+ longitude);
+
+									var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="
+											+ latitude
+											+ ","
+											+ longitude
+											+ "&size=600x300&markers=color:red%7C"
+											+ latitude
+											+ ","
+											+ longitude
+											+ "&key=AIzaSyAEevxL5GXYESYlQoNMFMZRaATP-l08YcM";
+
+									output.innerHTML = "<img src='"+imgURL+"'>";
+
+								}
+
+								function error() {
+									output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
+
+								}
+
+								navigator.geolocation.getCurrentPosition(
+										localizacion, error);
+
+							}
+						</script>
 
 
 
@@ -233,8 +282,7 @@
 
 
 
-	<button onclick="findMe()">Mostrar ubicación</button>
-	<div id="map"></div>
+
 
 
 
@@ -284,50 +332,6 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="js/funcion.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANjWsOk1P_2oAPY7lXYKxEVT8hGAgv4S8"></script>
-	<script>
-		function findMe() {
-			var output = document.getElementById('map');
-
-			// Verificar si soporta geolocalizacion
-			if (navigator.geolocation) {
-				output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
-			} else {
-				output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
-			}
-
-			//Obtenemos latitud y longitud
-			function localizacion(posicion) {
-
-				var latitude = posicion.coords.latitude;
-
-				var longitude = posicion.coords.longitude;
-
-				var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="
-						+ latitude
-						+ ","
-						+ longitude
-						+ "&size=600x300&markers=color:red%7C"
-						+ latitude
-						+ ","
-						+ longitude
-						+ "&key=AIzaSyANjWsOk1P_2oAPY7lXYKxEVT8hGAgv4S8";
-
-				output.innerHTML = "<img src='"+imgURL+"'>";
-
-			}
-
-			function error() {
-				output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-
-			}
-
-			navigator.geolocation.getCurrentPosition(localizacion, error);
-
-		}
-	</script>
-
 
 </body>
 

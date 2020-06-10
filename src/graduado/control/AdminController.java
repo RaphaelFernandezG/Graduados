@@ -11,8 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import graduado.entities.Evento;
 import graduado.entities.Eventoprin;
+import graduado.entities.Noticia;
+import graduado.entities.Notide;
 import graduado.model.EventoDao;
 import graduado.model.EventoprinDao;
+import graduado.model.NoticiaDao;
+import graduado.model.NotidestDao;
 
 /**
  * Servlet implementation class AdminController
@@ -57,6 +61,7 @@ public class AdminController extends HttpServlet {
 		
 		EventoprinDao eprinDao = new EventoprinDao();
 		eprinDao.update(eprin);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
 		rd.forward(request, response);
 	}

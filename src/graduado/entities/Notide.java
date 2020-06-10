@@ -15,25 +15,25 @@ public class Notide implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="id_notides")
-	private String idNotides;
+	@Column(name="id_nd")
+	private String idNd;
 
 	private String titular;
 
-	//bi-directional one-to-one association to Noticia
-	@OneToOne
+	//bi-directional many-to-one association to Noticia
+	@ManyToOne
 	@JoinColumn(name="id_notides")
 	private Noticia noticia;
 
 	public Notide() {
 	}
 
-	public String getIdNotides() {
-		return this.idNotides;
+	public String getIdNd() {
+		return this.idNd;
 	}
 
-	public void setIdNotides(String idNotides) {
-		this.idNotides = idNotides;
+	public void setIdNd(String idNd) {
+		this.idNd = idNd;
 	}
 
 	public String getTitular() {
