@@ -39,6 +39,13 @@
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="graDao" class="graduado.model.GraduadoDao"
 		scope="request"></jsp:useBean>
+	<jsp:useBean id="gradestDao" class="graduado.model.GraddestacadoDao"
+		scope="request"></jsp:useBean>	
+	<jsp:useBean id="expeDao" class="graduado.model.ExperienciaDao"
+		scope="request"></jsp:useBean>
+	<jsp:useBean id="expdestDao" class="graduado.model.ExpdestDao"
+		scope="request"></jsp:useBean>		
+		
 	<header>
 		<!--ENCABEZADO GENERAL-->
 		<div class="navbar-fixed">
@@ -194,6 +201,7 @@
 
 					</ul>
 				</div>
+				<!-- NOTICIA DESTACADA -->
 				<div id="news" class="col s12">
 					<form class="col s12" action="Admin1Controller" parent="_blank"
 						method="POST" runat="server">
@@ -226,16 +234,7 @@
                                     <label for="titular">Titular de la noticia</label>
                                 </div>
                             </div>
-							<div class="row">
-								<div class="file-field col s12">
-									<div id="btnupload" class="btn red-darken-3">
-										<span>IMG</span> <input type="file">
-									</div>
-									<div class="file-path-wrapper">
-										<input class="file-path validate" type="text">
-									</div>
-								</div>
-							</div>
+							
 							<br>
 							<center>
 								<button class="btn waves-effect waves-light red darken-3"
@@ -244,6 +243,7 @@
 						</div>
 					</form>
 				</div>
+				<!-- EVENTO DESTACADO -->
 				<div id="event" class="col s12">
 					<form class="col s12" action="AdminController" parent="_blank"
 						method="POST" runat="server">
@@ -277,16 +277,6 @@
 										descripcion del evento</label>
 								</div>
 							</div>
-							<div class="row">
-								<div class="file-field col s12">
-									<div id="btnupload" class="btn red-darken-3">
-										<span>IMG</span> <input type="file">
-									</div>
-									<div class="file-path-wrapper">
-										<input class="file-path validate" type="text">
-									</div>
-								</div>
-							</div>
 							<br>
 							<center>
 								<button class="btn waves-effect waves-light red darken-3"
@@ -295,36 +285,44 @@
 						</div>
 					</form>
 				</div>
+				<!-- GRADUADO DESTACADO -->
 				<div id="grad" class="col s12">
 					<form class="col s12">
 						<div class="form-container">
 							<h3 class="flow-text" id="titulologin">Destacar Graduado</h3>
 							<div class="row">
 								<div class="input-field col s12">
-									<select>
+									<select name="posgraddest" id="posgraddest">
 										<option value="" disabled selected>Escoja la posicion</option>
-										<option value="1">Option 1</option>
-									</select> <label>Posciones</label>
+										<c:forEach var="n" items="${gradestDao.list()}">
+											<option value="${n.posgraddest}"><c:out value="${n.posgraddest}" /></option>
+										</c:forEach>
+									</select> <label>Posiciones</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<select>
+									<select name="gradnombre" id="gradnombre">
 										<option value="" disabled selected>Escoja el graduado</option>
-										<option value="1">Option 1</option>
+										<c:forEach var="g" items="${graDao.list()}">
+											<option value="${g.numdocum}"><c:out
+													value="${g.nombre}"/><c:out
+													value="${' '}"/><c:out
+													value="${g.apellidos}"/></option>
+										</c:forEach>
 									</select> <label>Lista de graduados</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="cargo" type="text" class="validate" required>
-									<label for="cargo">Escriba el cargo que tiene</label>
+									<input id="title" type="text" class="validate" required>
+									<label for="title">Descripcion del nivel de grado academico</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="descr" type="text" class="validate" required>
-									<label for="descr">Realice una descripcion del empleo</label>
+									<label for="descr">Realice una descripcion del graduado</label>
 								</div>
 							</div>
 							<br>
@@ -335,27 +333,32 @@
 						</div>
 					</form>
 				</div>
+				<!-- EXPERIENCIA DESTACADA -->
 				<div id="exp" class="col s12">
 					<form class="col s12">
 						<div class="form-container">
-							<h3 class="flow-text" id="titulologin">Destacar Graduado</h3>
+							<h3 class="flow-text" id="titulologin">Destacar Experiencia</h3>
 							<div class="row">
 								<div class="input-field col s12">
-									<select>
+									<select name="posexpdest" id="posexpdest">
 										<option value="" disabled selected>Escoja la posicion</option>
-										<option value="1">Option 1</option>
-									</select> <label>Posciones</label>
+										<c:forEach var="n" items="${expdestDao.list()}">
+											<option value="${n.idDest}"><c:out value="${n.idDest}" /></option>
+										</c:forEach>
+									</select> <label>Posiciones</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<select>
-										<option value="" disabled selected>Escoja el graduado</option>
-										<option value="1">Option 1</option>
-									</select> <label>Lista de graduados</label>
+									<select name="expnombre" id="expnombre">
+										<option value="" disabled selected>Seleccione la experiencia</option>
+										<c:forEach var="x" items="${expeDao.list()}">
+											<option value="${x.link}"><c:out
+													value="${x.descripcion}" /></option>
+										</c:forEach>
+									</select> <label>Lista de videos</label>
 								</div>
 							</div>
-
 							<br>
 							<center>
 								<button class="btn waves-effect waves-light red darken-3"

@@ -19,14 +19,14 @@ public class Experiencia implements Serializable {
 
 	private String descripcion;
 
+	@Column(name="id_exp")
+	private String idExp;
+
+	private String numdocum;
+
 	//bi-directional many-to-one association to Expdest
 	@OneToMany(mappedBy="experiencia")
 	private List<Expdest> expdests;
-
-	//bi-directional many-to-one association to Graduado
-	@ManyToOne
-	@JoinColumn(name="numdocum")
-	private Graduado graduado;
 
 	public Experiencia() {
 	}
@@ -45,6 +45,22 @@ public class Experiencia implements Serializable {
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+
+	public String getIdExp() {
+		return this.idExp;
+	}
+
+	public void setIdExp(String idExp) {
+		this.idExp = idExp;
+	}
+
+	public String getNumdocum() {
+		return this.numdocum;
+	}
+
+	public void setNumdocum(String numdocum) {
+		this.numdocum = numdocum;
 	}
 
 	public List<Expdest> getExpdests() {
@@ -67,14 +83,6 @@ public class Experiencia implements Serializable {
 		expdest.setExperiencia(null);
 
 		return expdest;
-	}
-
-	public Graduado getGraduado() {
-		return this.graduado;
-	}
-
-	public void setGraduado(Graduado graduado) {
-		this.graduado = graduado;
 	}
 
 }
