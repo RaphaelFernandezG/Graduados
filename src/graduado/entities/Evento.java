@@ -6,7 +6,7 @@ import java.util.List;
 
 
 /**
- * The persistent class for the Evento database table.
+ * The persistent class for the evento database table.
  * 
  */
 @Entity

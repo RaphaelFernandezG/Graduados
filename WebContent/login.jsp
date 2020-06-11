@@ -59,6 +59,7 @@
 				method="POST" runat="server">
 				<div class="form-container">
 					<h3 id="titulologin">Ingresar</h3>
+					
 					<div class="row">
 						<div class="input-field col s12">
 							<input name="text" type="text" class="validate"> <label
@@ -119,7 +120,8 @@
 	<script src="js/funcion.js"></script>
 	<script
 		src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js">
-        </script>
+		
+	</script>
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>

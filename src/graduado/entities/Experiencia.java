@@ -6,7 +6,7 @@ import java.util.List;
 
 
 /**
- * The persistent class for the Experiencia database table.
+ * The persistent class for the experiencia database table.
  * 
  */
 @Entity

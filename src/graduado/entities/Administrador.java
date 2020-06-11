@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Administrador database table.
+ * The persistent class for the administrador database table.
  * 
  */
 @Entity
-@TableGenerator(name="administrador")
 @NamedQuery(name="Administrador.findAll", query="SELECT a FROM Administrador a")
 public class Administrador implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Graddestacado database table.
+ * The persistent class for the graddestacado database table.
  * 
  */
 @Entity
@@ -14,26 +14,26 @@ public class Graddestacado implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private String numdocum;
+	private String posgraddest;
 
 	private String descripcion;
 
 	private String titulo;
 
-	//bi-directional one-to-one association to Graduado
-	@OneToOne
+	//bi-directional many-to-one association to Graduado
+	@ManyToOne
 	@JoinColumn(name="numdocum")
 	private Graduado graduado;
 
 	public Graddestacado() {
 	}
 
-	public String getNumdocum() {
-		return this.numdocum;
+	public String getPosgraddest() {
+		return this.posgraddest;
 	}
 
-	public void setNumdocum(String numdocum) {
-		this.numdocum = numdocum;
+	public void setPosgraddest(String posgraddest) {
+		this.posgraddest = posgraddest;
 	}
 
 	public String getDescripcion() {

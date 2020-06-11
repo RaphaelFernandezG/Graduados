@@ -6,7 +6,7 @@ import java.util.List;
 
 
 /**
- * The persistent class for the Graduado database table.
+ * The persistent class for the graduado database table.
  * 
  */
 @Entity
@@ -27,21 +27,13 @@ public class Graduado implements Serializable {
 
 	private String fechagrad;
 
-	private String latitud;
-
-	private String longitud;
-
 	private String nombre;
 
 	private String telefono;
 
-	//bi-directional many-to-one association to Experiencia
+	//bi-directional many-to-one association to Graddestacado
 	@OneToMany(mappedBy="graduado")
-	private List<Experiencia> experiencias;
-
-	//bi-directional one-to-one association to Graddestacado
-	@OneToOne(mappedBy="graduado")
-	private Graddestacado graddestacado;
+	private List<Graddestacado> graddestacados;
 
 	public Graduado() {
 	}
@@ -94,22 +86,6 @@ public class Graduado implements Serializable {
 		this.fechagrad = fechagrad;
 	}
 
-	public String getLatitud() {
-		return this.latitud;
-	}
-
-	public void setLatitud(String latitud) {
-		this.latitud = latitud;
-	}
-
-	public String getLongitud() {
-		return this.longitud;
-	}
-
-	public void setLongitud(String longitud) {
-		this.longitud = longitud;
-	}
-
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -126,34 +102,26 @@ public class Graduado implements Serializable {
 		this.telefono = telefono;
 	}
 
-	public List<Experiencia> getExperiencias() {
-		return this.experiencias;
+	public List<Graddestacado> getGraddestacados() {
+		return this.graddestacados;
 	}
 
-	public void setExperiencias(List<Experiencia> experiencias) {
-		this.experiencias = experiencias;
+	public void setGraddestacados(List<Graddestacado> graddestacados) {
+		this.graddestacados = graddestacados;
 	}
 
-	public Experiencia addExperiencia(Experiencia experiencia) {
-		getExperiencias().add(experiencia);
-		experiencia.setGraduado(this);
+	public Graddestacado addGraddestacado(Graddestacado graddestacado) {
+		getGraddestacados().add(graddestacado);
+		graddestacado.setGraduado(this);
 
-		return experiencia;
+		return graddestacado;
 	}
 
-	public Experiencia removeExperiencia(Experiencia experiencia) {
-		getExperiencias().remove(experiencia);
-		experiencia.setGraduado(null);
+	public Graddestacado removeGraddestacado(Graddestacado graddestacado) {
+		getGraddestacados().remove(graddestacado);
+		graddestacado.setGraduado(null);
 
-		return experiencia;
-	}
-
-	public Graddestacado getGraddestacado() {
-		return this.graddestacado;
-	}
-
-	public void setGraddestacado(Graddestacado graddestacado) {
-		this.graddestacado = graddestacado;
+		return graddestacado;
 	}
 
 }

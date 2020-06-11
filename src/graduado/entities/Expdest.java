@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Expdest database table.
+ * The persistent class for the expdest database table.
  * 
  */
 @Entity

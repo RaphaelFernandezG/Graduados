@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Ofertalab database table.
+ * The persistent class for the ofertalab database table.
  * 
  */
 @Entity

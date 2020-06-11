@@ -75,7 +75,7 @@ public class GraduadoController extends HttpServlet {
 		gra.setNumdocum(numdocum);
 		gra.setTelefono(telefono);
 		gra.setLatitud(latitud);
-		gra.setLongitud(longitud);;
+		gra.setLongitud(longitud);
 		
 		GraduadoDao graDao = new GraduadoDao();
 		graDao.insert(gra);

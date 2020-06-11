@@ -2,11 +2,10 @@ package graduado.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
- * The persistent class for the Noticia database table.
+ * The persistent class for the noticia database table.
  * 
  */
 @Entity
@@ -25,9 +24,9 @@ public class Noticia implements Serializable {
 
 	private String lugar;
 
-	//bi-directional many-to-one association to Notide
-	@OneToMany(mappedBy="noticia")
-	private List<Notide> notides;
+	//bi-directional one-to-one association to Notide
+	@OneToOne(mappedBy="noticia")
+	private Notide notide;
 
 	public Noticia() {
 	}
@@ -72,26 +71,12 @@ public class Noticia implements Serializable {
 		this.lugar = lugar;
 	}
 
-	public List<Notide> getNotides() {
-		return this.notides;
+	public Notide getNotide() {
+		return this.notide;
 	}
 
-	public void setNotides(List<Notide> notides) {
-		this.notides = notides;
-	}
-
-	public Notide addNotide(Notide notide) {
-		getNotides().add(notide);
-		notide.setNoticia(this);
-
-		return notide;
-	}
-
-	public Notide removeNotide(Notide notide) {
-		getNotides().remove(notide);
-		notide.setNoticia(null);
-
-		return notide;
+	public void setNotide(Notide notide) {
+		this.notide = notide;
 	}
 
 }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Eventoprin database table.
+ * The persistent class for the eventoprin database table.
  * 
  */
 @Entity

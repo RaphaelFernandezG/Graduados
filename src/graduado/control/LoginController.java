@@ -54,7 +54,7 @@ public class LoginController extends HttpServlet {
 
 		String text = request.getParameter("text");
 		String pass = request.getParameter("password");
-		String id = "0";
+		String id = "00";
 
 		admin.setUser(text);
 		admin.setPassword(pass);
