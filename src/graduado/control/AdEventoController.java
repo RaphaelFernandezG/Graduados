@@ -19,16 +19,16 @@ import graduado.model.NoticiaDao;
 import graduado.model.NotidestDao;
 
 /**
- * Servlet implementation class AdminController
+ * Servlet implementation class AdEventoController
  */
-@WebServlet("/AdminController")
-public class AdminController extends HttpServlet {
+@WebServlet("/AdEventoController")
+public class AdEventoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminController() {
+    public AdEventoController() {
         super();
         // TODO Auto-generated constructor stub
     }
