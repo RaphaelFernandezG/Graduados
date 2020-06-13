@@ -158,6 +158,12 @@
 							<i class="material-icons prefix">phone</i> <label for="telefono">Telefono</label>
 							<input type="number" name="telefono" required>
 						</div>
+						
+						<div class="input-field">
+							<i class="material-icons prefix">my_location</i> <label
+								for="pais">Pais</label> <input type="text"
+								name="pais" required>
+						</div>
 
 
 						<div class="input-field">
@@ -167,11 +173,7 @@
 						</div>
 
 
-						<div class="input-field">
-							<i class="material-icons prefix">my_location</i> <label
-								for="direccion">Direccion</label> <input type="text"
-								name="direccion" required>
-						</div>
+						
 
 
 
@@ -188,7 +190,7 @@
 
 
 
-						<button onclick="findMe()">Mostrar ubicación</button>
+						<!-- <button onclick="findMe()">Mostrar ubicación</button>
 						<div id="map"></div>
 
 						<script
@@ -237,7 +239,7 @@
 										localizacion, error);
 
 							}
-						</script>
+						</script>-->
 
 
 
