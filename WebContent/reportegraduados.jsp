@@ -23,9 +23,9 @@
 				</thead>
 
 				<tbody>
-				<%response.setContentType("application/vnd.ms-excel");
-				response.setHeader("Content-Disposition", "inline; filename=graduados.xls");
-				ArrayList<GraduadoDao> graduados = (ArrayList<GraduadoDao>) session.getAttribute("graduado"); %>
+				<% response.setContentType("application/vnd.ms-excel");
+				response.setHeader("Content-Disposition", "inline; filename=graduados.xls");%>
+				<!--  ArrayList<GraduadoDao> graduados = (ArrayList<GraduadoDao>) session.getAttribute("graduado"); %>-->
 				
 				
 					<c:forEach var="n" items="${graDao.list()}">					
