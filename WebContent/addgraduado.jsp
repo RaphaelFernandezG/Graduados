@@ -35,7 +35,7 @@
 		<div class="navbar-fixed">
 			<nav class="nav-extended red darken-4 ">
 				<div class="nav-wrapper red darken-2 navbar-fixed">
-					<a id="logouno" href="index." class="brand-logo flow-text truncate"><i
+					<a id="logouno" href="index.jsp" class="brand-logo flow-text truncate"><i
 						id="marghea" class="material-icons">school</i>Graduados ING.
 						SISTEMAS</a> <a href="#" data-target="mobile-demo"
 						class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -50,29 +50,29 @@
 							data-target="cargas">CARGAR DATOS</a></li>
 					</ul>
 					<ul id="cargas" class="dropdown-content red darken-2">
-						<li><a id="lin" href="admin.">INICIO</a></li>
-						<li><a id="lin" href="addnoticia.">agregar noticia</a></li>
-						<li><a id="lin" href="addgraduado.">registrar graduado</a></li>
-						<li><a id="lin" href="addevento.">agregar evento</a></li>
-						<li><a id="lin" href="addexperiencia.">agregar
+						<li><a id="lin" href="admin.jsp">INICIO</a></li>
+						<li><a id="lin" href="addnoticia.jsp">agregar noticia</a></li>
+						<li><a id="lin" href="addgraduado.jsp">registrar graduado</a></li>
+						<li><a id="lin" href="addevento.jsp">agregar evento</a></li>
+						<li><a id="lin" href="addexperiencia.jsp">agregar
 								experiencia</a></li>
-						<li><a id="lin" href="addofertalab.">agregar experiencia</a></li>
+						<li><a id="lin" href="addofertalab.jsp">agregar experiencia</a></li>
 					</ul>
 				</div>
 				<div class="nav-content red-darken-4 hide-on-med-and-down">
 					<ul class="red-darken-4 hide-on-med-and-down">
 						<li class="tab"><a
 							class="dropdown-trigger waves-effect waves-black"
-							href="ofertaslabs." data-target="ofertas">OFERTA LABORAL</a></li>
+							href="ofertaslabs.jsp" data-target="ofertas">OFERTA LABORAL</a></li>
 						<li class="tab"><a
 							class="dropdown-trigger waves-effect waves-black"
-							href="experiencias." data-target="encuestas">EXPERIENCIAS</a></li>
+							href="experiencias.jsp" data-target="encuestas">EXPERIENCIAS</a></li>
 						<li class="tab"><a
-							class="dropdown-trigger waves-effect waves-black" href="eventos.">EVENTOS</a>
+							class="dropdown-trigger waves-effect waves-black" href="eventos.jsp">EVENTOS</a>
 						</li>
 						<li class="tab"><a
 							class="dropdown-trigger waves-effect waves-black"
-							href="noticias.">NOTICIAS</a></li>
+							href="noticias.jsp">NOTICIAS</a></li>
 						<li class="tab"><a
 							class="dropdown-trigger waves-effect waves-black tooltipped"
 							href="" data-position="bottom"
@@ -91,7 +91,7 @@
 		<!--BARRA LATERAL: SIDENAV-->
 		<ul class="sidenav red darken-4" id="mobile-demo">
 			<li><a id="login"
-				class="waves-effect waves-light btn grey lighten-5" href="login."><i
+				class="waves-effect waves-light btn grey lighten-5" href="login.jsp"><i
 					class="material-icons right">person</i>INGRESAR</a></li>
 			<li>
 				<div class="divider"></div>
@@ -106,11 +106,11 @@
 				<div class="divider"></div>
 			</li>
 			<li><a class="subheader">Interes de Graduados</a></li>
-			<li><a id="ext" href="ofertaslabs."><i
+			<li><a id="ext" href="ofertaslabs.jsp"><i
 					class="material-icons">work</i>Ofertas Laborales</a></li>
-			<li><a id="ext" href="eventos."><i class="material-icons">question_answer</i>Eventos</a></li>
-			<li><a id="ext" href="noticias."><i class="material-icons">view_carousel</i>Noticias</a></li>
-			<li><a id="ext" href="experiencias."><i
+			<li><a id="ext" href="eventos.jsp"><i class="material-icons">question_answer</i>Eventos</a></li>
+			<li><a id="ext" href="noticias.jsp"><i class="material-icons">view_carousel</i>Noticias</a></li>
+			<li><a id="ext" href="experiencias.jsp"><i
 					class="material-icons">card_membership</i>Experiencias</a></li>
 		</ul>
 	</header>
