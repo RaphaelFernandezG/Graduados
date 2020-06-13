@@ -183,8 +183,12 @@
 							<td><c:out value="${n.email}" /></td>
 						</tr>
 					</c:forEach>
+					<%
+			session.setAttribute("n", graDao);
+		%>
 				</tbody>
 			</table>
+			<a href=reportegraduados.jsp>Generar Reporte</a>
 		</div>
 		<div class="col s12 m6 l5">
 			<div class="row">
@@ -228,6 +232,7 @@
 											<option value="${no.id}"><c:out
 													value="${no.descripcion}" /></option>
 										</c:forEach>
+										
 									</select> <label>Lista de noticias</label>
 								</div>
 							</div>
