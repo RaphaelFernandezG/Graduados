@@ -184,7 +184,7 @@
 						</tr>
 					</c:forEach>
 					<%
-			session.setAttribute("n", graDao);
+			session.setAttribute("graduado", graDao);
 		%>
 				</tbody>
 			</table>

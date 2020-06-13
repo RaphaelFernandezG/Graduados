@@ -68,7 +68,7 @@ public class GraduadoController extends HttpServlet {
 		Graduado gra = new Graduado();
 		gra.setApellidos(apellidos);
 		gra.setCiudad(ciudad);
-		gra.setDireccion(pais);
+		gra.setPais(pais);
 		gra.setEmail(email);
 		gra.setFechagrad(fechagrad);
 		gra.setNombre(nombre);

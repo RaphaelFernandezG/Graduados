@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
    <%@page import="java.util.ArrayList"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page import="graduado.model.GraduadoDao"%>
 <!DOCTYPE html>
 <html>
@@ -25,10 +26,9 @@
 				<%response.setContentType("application/vnd.ms-excel");
 				response.setHeader("Content-Disposition", "inline; filename=graduados.xls");
 				ArrayList<GraduadoDao> graduados = (ArrayList<GraduadoDao>) session.getAttribute("graduado"); %>
-					<c:forEach var="n" items="${graDao.list()}">
-					
 				
-					
+				
+					<c:forEach var="n" items="${graDao.list()}">					
 						<tr>
 							<td><c:out value="${n.nombre}" /></td>
 							<td><c:out value="${n.numdocum}" /></td>
