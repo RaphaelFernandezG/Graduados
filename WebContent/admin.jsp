@@ -40,12 +40,12 @@
 	<jsp:useBean id="graDao" class="graduado.model.GraduadoDao"
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="gradestDao" class="graduado.model.GraddestacadoDao"
-		scope="request"></jsp:useBean>	
+		scope="request"></jsp:useBean>
 	<jsp:useBean id="expeDao" class="graduado.model.ExperienciaDao"
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="expdestDao" class="graduado.model.ExpdestDao"
-		scope="request"></jsp:useBean>		
-		
+		scope="request"></jsp:useBean>
+
 	<header>
 		<!--ENCABEZADO GENERAL-->
 		<div class="navbar-fixed">
@@ -201,9 +201,10 @@
 
 					</ul>
 				</div>
+
 				<!-- NOTICIA DESTACADA -->
 				<div id="news" class="col s12">
-					<form class="col s12" action="Admin1Controller" parent="_blank"
+					<form class="col s12" action="AdNoticiaController" parent="_blank"
 						method="POST" runat="server">
 						<div class="form-container">
 							<h3 class="flow-text" id="titulologin">Destacar Noticia</h3>
@@ -212,29 +213,31 @@
 									<select name="posnotides" id="posnotides">
 										<option value="" disabled selected>Escoja la posicion</option>
 										<c:forEach var="nod" items="${notideDao.list()}">
-											<option value="${nod.idNd}"><c:out value="${nod.idNd}" /></option>
+											<option value="${nod.idNd}"><c:out
+													value="${nod.idNd}" /></option>
 										</c:forEach>
 									</select> <label>Posiciones</label>
 								</div>
 							</div>
 							<div class="row">
-                                <div class="input-field col s12">
-                                    <select name="notinombre" id="notinombre">
-                                        <option value="" disabled selected>Seleccione la noticia</option>
-                                         <c:forEach var="no" items="${notiDao.list()}">
-									<option value="${no.id}"><c:out value="${no.descripcion}"/></option>
-								</c:forEach>
-                                    </select>
-                                    <label>Lista de noticias</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input name="titular" type="text" class="validate" required>
-                                    <label for="titular">Titular de la noticia</label>
-                                </div>
-                            </div>
-							
+								<div class="input-field col s12">
+									<select name="notinombre" id="notinombre">
+										<option value="" disabled selected>Seleccione la
+											noticia</option>
+										<c:forEach var="no" items="${notiDao.list()}">
+											<option value="${no.id}"><c:out
+													value="${no.descripcion}" /></option>
+										</c:forEach>
+									</select> <label>Lista de noticias</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input name="titular" type="text" class="validate" required>
+									<label for="titular">Titular de la noticia</label>
+								</div>
+							</div>
+
 							<br>
 							<center>
 								<button class="btn waves-effect waves-light red darken-3"
@@ -245,7 +248,7 @@
 				</div>
 				<!-- EVENTO DESTACADO -->
 				<div id="event" class="col s12">
-					<form class="col s12" action="AdminController" parent="_blank"
+					<form class="col s12" action="AdEventoController" parent="_blank"
 						method="POST" runat="server">
 						<div class="form-container">
 							<h3 class="flow-text" id="titulologin">Destacar Evento</h3>
@@ -287,7 +290,8 @@
 				</div>
 				<!-- GRADUADO DESTACADO -->
 				<div id="grad" class="col s12">
-					<form class="col s12">
+					<form class="col s12" action="AdGraduadoController" parent="_blank"
+						method="POST" runat="server">
 						<div class="form-container">
 							<h3 class="flow-text" id="titulologin">Destacar Graduado</h3>
 							<div class="row">
@@ -295,7 +299,8 @@
 									<select name="posgraddest" id="posgraddest">
 										<option value="" disabled selected>Escoja la posicion</option>
 										<c:forEach var="n" items="${gradestDao.list()}">
-											<option value="${n.posgraddest}"><c:out value="${n.posgraddest}" /></option>
+											<option value="${n.posgraddest}"><c:out
+													value="${n.posgraddest}" /></option>
 										</c:forEach>
 									</select> <label>Posiciones</label>
 								</div>
@@ -306,22 +311,22 @@
 										<option value="" disabled selected>Escoja el graduado</option>
 										<c:forEach var="g" items="${graDao.list()}">
 											<option value="${g.numdocum}"><c:out
-													value="${g.nombre}"/><c:out
-													value="${' '}"/><c:out
-													value="${g.apellidos}"/></option>
+													value="${g.nombre}" /><c:out value="${' '}" /><c:out
+													value="${g.apellidos}" /></option>
 										</c:forEach>
 									</select> <label>Lista de graduados</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="title" type="text" class="validate" required>
-									<label for="title">Descripcion del nivel de grado academico</label>
+									<input name="title" id="title" type="text" class="validate" required>
+									<label for="title">Descripcion del nivel de grado
+										academico</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="descr" type="text" class="validate" required>
+									<input name="descr" id="descr" type="text" class="validate" required>
 									<label for="descr">Realice una descripcion del graduado</label>
 								</div>
 							</div>
@@ -335,7 +340,8 @@
 				</div>
 				<!-- EXPERIENCIA DESTACADA -->
 				<div id="exp" class="col s12">
-					<form class="col s12">
+					<form class="col s12" action="AdVideoController" parent="_blank"
+						method="POST" runat="server">
 						<div class="form-container">
 							<h3 class="flow-text" id="titulologin">Destacar Experiencia</h3>
 							<div class="row">
@@ -343,7 +349,8 @@
 									<select name="posexpdest" id="posexpdest">
 										<option value="" disabled selected>Escoja la posicion</option>
 										<c:forEach var="n" items="${expdestDao.list()}">
-											<option value="${n.idDest}"><c:out value="${n.idDest}" /></option>
+											<option value="${n.idDest}"><c:out
+													value="${n.idDest}" /></option>
 										</c:forEach>
 									</select> <label>Posiciones</label>
 								</div>
