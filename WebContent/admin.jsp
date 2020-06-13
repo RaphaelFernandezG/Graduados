@@ -149,7 +149,7 @@
 			<div class="col s12 l8">
 				<c:forEach var="n" begin="0" end="0" items="${diradmDao.list()}">
 					<tr>
-						<td><span class="black-text flow-text">${n.nombres}</span></td>
+						<td><span class="black-text flow-text">${n.nombres}</span><span class="black-text flow-text">${' '}</span><span class="black-text flow-text">${n.apellidos}</span></td>
 					</tr>
 				</c:forEach>
 				<br> <span class="black-text flow-text">Director de

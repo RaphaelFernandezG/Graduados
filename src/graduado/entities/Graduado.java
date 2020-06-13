@@ -21,13 +21,13 @@ public class Graduado implements Serializable {
 
 	private String ciudad;
 
-	private String pais;
-
 	private String email;
 
 	private String fechagrad;
 
 	private String nombre;
+
+	private String pais;
 
 	private String telefono;
 
@@ -66,14 +66,6 @@ public class Graduado implements Serializable {
 		this.ciudad = ciudad;
 	}
 
-	public String getDireccion() {
-		return this.pais;
-	}
-
-	public void setDireccion(String direccion) {
-		this.pais = direccion;
-	}
-
 	public String getEmail() {
 		return this.email;
 	}
@@ -96,6 +88,14 @@ public class Graduado implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public String getPais() {
+		return this.pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
 	}
 
 	public String getTelefono() {
