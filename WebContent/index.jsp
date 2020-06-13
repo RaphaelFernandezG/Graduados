@@ -83,7 +83,7 @@
 
 		<ul id="ofertas" class="dropdown-content red darken-2">
 			<li><a id="lin" href="ofertaslabs.jsp">Ofertas del Programa</a></li>
-			<li><a id="lin" href="http://tutrabajo.ufps.trabajando.com.co/">TuTrabajo</a></li>
+			<li><a id="lin" href="https://ingsistemas.cloud.ufps.edu.co/index.php?pid=77">Oferta desde Sistemas</a></li>
 		</ul>
 
 
@@ -120,17 +120,17 @@
 	<!--SLIDER PRINCIPAL-->
 	<div class="slider" style="margin-top: 18px;">
 		<ul class="slides">
-			<li><img src="resources/encasa.jpeg"> <!-- random image -->
+			<li><img src="resources/encasa.jpeg" class="responsive-img"> <!-- random image -->
 				<div class="caption right-align">
 					<c:forEach var="noti" begin="0" end="0"
 						items="${notidestDao.list()}">
 						<tr>
 							<td>
-								<h3>${noti.titular}</h3> <c:forEach var="n" begin="0" end="0"
-									items="${notiDao.list()}">
+								<h3 class="right-align">${noti.titular}</h3> <c:forEach var="n"
+									begin="0" end="0" items="${notiDao.list()}">
 									<tr>
 										<td>
-											<h5 class="light grey-text text-lighten-3">${n.descripcion}</h5>
+											<h5 class="light grey-text text-lighten-3 right-align">${n.descripcion}</h5>
 										</td>
 									</tr>
 								</c:forEach>
@@ -434,7 +434,9 @@
 
 	<div class="container row">
 		<div class="video-container">
-			<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1wMBBVb78vUSeMJjNADpYVXYwvGKG_oHr" width="640" height="480"></iframe>
+			<iframe
+				src="https://www.google.com/maps/d/u/1/embed?mid=1wMBBVb78vUSeMJjNADpYVXYwvGKG_oHr"
+				width="640" height="480"></iframe>
 		</div>
 	</div>
 
@@ -463,7 +465,7 @@
 		</div>
 		<div class="footer-copyright red darken-4">
 			<div class="container">
-				2019 © All Rights Reserved. Desarrollado por: <a
+				2019 © All Rights Reserved. Desarrollado por: Ing. Sistemas<a
 					class="grey-text text-lighten-4 right" href="#!">Social media</a>
 
 			</div>

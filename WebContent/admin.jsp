@@ -149,7 +149,9 @@
 			<div class="col s12 l8">
 				<c:forEach var="n" begin="0" end="0" items="${diradmDao.list()}">
 					<tr>
-						<td><span class="black-text flow-text">${n.nombres}</span><span class="black-text flow-text">${' '}</span><span class="black-text flow-text">${n.apellidos}</span></td>
+						<td><span class="black-text flow-text">${n.nombres}</span><span
+							class="black-text flow-text">${' '}</span><span
+							class="black-text flow-text">${n.apellidos}</span></td>
 					</tr>
 				</c:forEach>
 				<br> <span class="black-text flow-text">Director de
@@ -184,12 +186,18 @@
 						</tr>
 					</c:forEach>
 					<%
-			session.setAttribute("graduado", graDao);
-		%>
+						session.setAttribute("graduado", graDao);
+					%>
 				</tbody>
 			</table>
-			<a href=reportegraduados.jsp>Generar Reporte</a>
+			<br>
+			<center>
+				<a href=reportegraduados.jsp
+					class="waves-effect waves-light btn btn-small green accent-4 black-text"><i
+					class="material-icons right">table_chart</i>Generar Reporte</a>
+			</center>
 		</div>
+		
 		<div class="col s12 m6 l5">
 			<div class="row">
 				<div class="col s12">
@@ -232,7 +240,7 @@
 											<option value="${no.id}"><c:out
 													value="${no.descripcion}" /></option>
 										</c:forEach>
-										
+
 									</select> <label>Lista de noticias</label>
 								</div>
 							</div>
