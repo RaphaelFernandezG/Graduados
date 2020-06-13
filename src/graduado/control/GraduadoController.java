@@ -47,7 +47,7 @@ public class GraduadoController extends HttpServlet {
 		String email = request.getParameter("email");
 		String telefono = request.getParameter("telefono");
 		String ciudad = request.getParameter("ciudad");
-		String direccion = request.getParameter("pais");
+		String pais = request.getParameter("pais");
 		
 		
 		
