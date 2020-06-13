@@ -45,6 +45,10 @@
 		scope="request"></jsp:useBean>
 	<jsp:useBean id="expdestDao" class="graduado.model.ExpdestDao"
 		scope="request"></jsp:useBean>
+	<jsp:useBean id="diradmDao" class="graduado.model.DiradminDao"
+		scope="request"></jsp:useBean>
+
+
 
 	<header>
 		<!--ENCABEZADO GENERAL-->
@@ -57,11 +61,6 @@
 						href="#" data-target="mobile-demo" class="sidenav-trigger"><i
 						class="material-icons">menu</i></a>
 					<ul class="right hide-on-med-and-down">
-						<li><a id="ext" href="https://ww2.ufps.edu.co/">Pagina
-								UFPS</a></li>
-						<li><a id="ext"
-							href="https://ingsistemas.cloud.ufps.edu.co/index.php">Pagina
-								de Sistemas</a></li>
 						<li class="tab"><a
 							class="dropdown-trigger waves-effect waves-black" href=""
 							data-target="cargas">CARGAR DATOS</a></li>
@@ -123,11 +122,6 @@
 				<div class="divider"></div>
 			</li>
 			<li><a class="subheader">Sitios Institucionales</a></li>
-			<li><a id="ext" href="https://ww2.ufps.edu.co/"><i
-					class="material-icons">web</i>Pagina UFPS</a></li>
-			<li><a id="ext"
-				href="https://ingsistemas.cloud.ufps.edu.co/index.php"><i
-					class="material-icons">web</i>Pagina de Sistemas</a></li>
 			<li>
 				<div class="divider"></div>
 			</li>
@@ -148,12 +142,18 @@
 	<div class="container" style="padding-top: 30px;">
 		<div class="card-panel row valign-wrapper">
 			<div class="col s12 l2">
-				<img src="https://picsum.photos/id/896/412/310" alt=""
-					class="circle responsive-img">
+				<img
+					src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+					class="responsive-img" width="200" height="200">
 			</div>
 			<div class="col s12 l8">
-				<span class="black-text flow-text"> NOMBRE CORREO TELEFONO
-					CARGO </span>
+				<c:forEach var="n" begin="0" end="0" items="${diradmDao.list()}">
+					<tr>
+						<td><span class="black-text flow-text">${n.nombres}</span></td>
+					</tr>
+				</c:forEach>
+				<br> <span class="black-text flow-text">Director de
+					Ingenieria de Sistemas</span>
 			</div>
 			<div class="col s12 l2 valign-wrapper center">
 				<a class="waves-effect waves-light  btn yellow accent-3 black-text"
@@ -319,15 +319,16 @@
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input name="title" id="title" type="text" class="validate" required>
-									<label for="title">Descripcion del nivel de grado
-										academico</label>
+									<input name="title" id="title" type="text" class="validate"
+										required> <label for="title">Descripcion del
+										nivel de grado academico</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input name="descr" id="descr" type="text" class="validate" required>
-									<label for="descr">Realice una descripcion del graduado</label>
+									<input name="descr" id="descr" type="text" class="validate"
+										required> <label for="descr">Realice una
+										descripcion del graduado</label>
 								</div>
 							</div>
 							<br>
@@ -358,7 +359,8 @@
 							<div class="row">
 								<div class="input-field col s12">
 									<select name="expnombre" id="expnombre">
-										<option value="" disabled selected>Seleccione la experiencia</option>
+										<option value="" disabled selected>Seleccione la
+											experiencia</option>
 										<c:forEach var="x" items="${expeDao.list()}">
 											<option value="${x.link}"><c:out
 													value="${x.descripcion}" /></option>
@@ -380,37 +382,16 @@
 	</div>
 
 
-
-
 	<!--FOOTER-->
 	<footer class="page-footer red darken-2">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<img class="responsive-img" src="resources/logo_horizontal.png"
-						width="400">
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Enlaces de Interes</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Grupo
-								de Facebook</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Biblioteca
-								Eduardo Cote Lamus</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Canal
-								UFPS en YouTube</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 		<div class="footer-copyright red darken-4">
 			<div class="container">
 				2019 © All Rights Reserved. Desarrollado por: <a
 					class="grey-text text-lighten-4 right" href="#!">Social media</a>
-
 			</div>
 		</div>
 	</footer>
+
 	<!-- Compiled and minified JavaScript -->
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
