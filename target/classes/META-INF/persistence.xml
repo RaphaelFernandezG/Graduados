@@ -16,6 +16,7 @@
 		<class>graduado.entities.Noticia</class>
 		<class>graduado.entities.Notide</class>
 		<class>graduado.entities.Ofertalab</class>
+		<class>graduado.entities.Directoradmin</class>
 		
 	
 		<properties>
@@ -30,11 +31,12 @@
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/sysgradv1?serverTimezone=UTC" />
+				value="jdbc:mysql://localhost:3306/sysgradv1?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
 			<property name="javax.persistence.jdbc.user"
 				value="root" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.password" value=""/>
 		</properties>
 	</persistence-unit>
 </persistence>

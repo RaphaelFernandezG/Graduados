@@ -21,7 +21,7 @@ public class Graduado implements Serializable {
 
 	private String ciudad;
 
-	private String pais;
+	private String direccion;
 
 	private String email;
 
@@ -30,6 +30,10 @@ public class Graduado implements Serializable {
 	private String nombre;
 
 	private String telefono;
+
+	//bi-directional many-to-one association to Experiencia
+	@OneToMany(mappedBy="graduado")
+	private List<Experiencia> experiencias;
 
 	//bi-directional many-to-one association to Graddestacado
 	@OneToMany(mappedBy="graduado")
@@ -63,11 +67,11 @@ public class Graduado implements Serializable {
 	}
 
 	public String getDireccion() {
-		return this.pais;
+		return this.direccion;
 	}
 
 	public void setDireccion(String direccion) {
-		this.pais = direccion;
+		this.direccion = direccion;
 	}
 
 	public String getEmail() {
@@ -100,6 +104,28 @@ public class Graduado implements Serializable {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	public List<Experiencia> getExperiencias() {
+		return this.experiencias;
+	}
+
+	public void setExperiencias(List<Experiencia> experiencias) {
+		this.experiencias = experiencias;
+	}
+
+	public Experiencia addExperiencia(Experiencia experiencia) {
+		getExperiencias().add(experiencia);
+		experiencia.setGraduado(this);
+
+		return experiencia;
+	}
+
+	public Experiencia removeExperiencia(Experiencia experiencia) {
+		getExperiencias().remove(experiencia);
+		experiencia.setGraduado(null);
+
+		return experiencia;
 	}
 
 	public List<Graddestacado> getGraddestacados() {
