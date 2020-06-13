@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Graduados | UFPS Ing. de Sistemas</title>
-<link rel="shortcut icon" href="resources/LogoSys.png"
-	type="image/x-icon">
+<link rel="shortcut icon" href="resources/icon.png" type="image/x-icon">
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -19,33 +18,26 @@
 </head>
 
 <body>
+	
+	<!-- CABEZA DE PAGINA -->
 	<header>
 		<!--ENCABEZADO GENERAL-->
 		<div class="navbar-fixed">
 			<nav class="nav-extended red darken-4 ">
 				<div class="nav-wrapper red darken-2 navbar-fixed">
-					<a id="logouno" href="index.jsp"
-						class="brand-logo flow-text truncate"><i id="marghea"
-						class="material-icons">school</i>Graduados ING. SISTEMAS</a> <a
-						href="#" data-target="mobile-demo" class="sidenav-trigger"><i
-						class="material-icons">menu</i></a>
-					<ul class="right hide-on-med-and-down">
-						<li><a id="ext" href="">Pagina UFPS</a></li>
-						<li><a id="ext" href="">Pagina de Sistemas</a></li>
-					</ul>
+					<a id="logouno" href="#!" class="brand-logo flow-text truncate"><i
+						id="marghea" class="material-icons">school</i>Graduados ING.
+						SISTEMAS</a>
 				</div>
 			</nav>
 		</div>
 
+
 		<!--BARRA LATERAL: SIDENAV-->
 		<ul class="sidenav red darken-4" id="mobile-demo">
-			<li><a class="subheader">Sitios Institucionales</a></li>
-			<li><a id="ext" href=""><i class="material-icons">web</i>Pagina
-					UFPS</a></li>
-			<li><a id="ext" href=""><i class="material-icons">web</i>Pagina
-					de Sistemas</a></li>
 		</ul>
 	</header>
+
 
 	<!--FORMULARIOS-->
 	<div id="formulario" class="container white z-depth-2">
@@ -81,9 +73,8 @@
 			</form>
 		</div>
 	</div>
-
-
-	<!--PIE DE PAGINA-->
+	
+	<!-- PIE DE PAGINA -->
 	<footer class="page-footer red darken-2">
 		<div class="container">
 			<div class="row">
@@ -106,12 +97,15 @@
 		</div>
 		<div class="footer-copyright red darken-4">
 			<div class="container">
-				2019 © All Rights Reserved. Desarrollado por: <a
+				2019 © All Rights Reserved. Desarrollado por: Ing. Sistemas<a
 					class="grey-text text-lighten-4 right" href="#!">Social media</a>
 
 			</div>
 		</div>
+
 	</footer>
+	
+	
 
 
 	<!-- Compiled and minified JavaScript -->

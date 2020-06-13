@@ -48,11 +48,9 @@
 						SISTEMAS</a> <a href="#" data-target="mobile-demo"
 						class="sidenav-trigger"><i class="material-icons">menu</i></a>
 					<ul class="right hide-on-med-and-down">
-						<li><a id="ext" href="https://ww2.ufps.edu.co/">Pagina
-								UFPS</a></li>
+						<li><a id="ext" href="https://ww2.ufps.edu.co/">UFPS</a></li>
 						<li><a id="ext"
-							href="https://ingsistemas.cloud.ufps.edu.co/index.php">Pagina
-								de Sistemas</a></li>
+							href="https://ingsistemas.cloud.ufps.edu.co/index.php">IngSistemas</a></li>
 						<li><a id="login"
 							class="waves-effect waves-light btn grey lighten-5"
 							href="login.jsp"><i class="material-icons right">person</i>INGRESAR</a></li>
@@ -83,7 +81,9 @@
 
 		<ul id="ofertas" class="dropdown-content red darken-2">
 			<li><a id="lin" href="ofertaslabs.jsp">Ofertas del Programa</a></li>
-			<li><a id="lin" href="https://ingsistemas.cloud.ufps.edu.co/index.php?pid=77">Oferta desde Sistemas</a></li>
+			<li><a id="lin"
+				href="https://ingsistemas.cloud.ufps.edu.co/index.php?pid=77">Oferta
+					desde Sistemas</a></li>
 		</ul>
 
 
@@ -97,10 +97,10 @@
 			</li>
 			<li><a class="subheader">Sitios Institucionales</a></li>
 			<li><a id="ext" href="ww2.ufps.edu.co"><i
-					class="material-icons">web</i>Pagina UFPS</a></li>
+					class="material-icons">web</i>UFPS</a></li>
 			<li><a id="ext"
 				href="https://ingsistemas.cloud.ufps.edu.co/index.php"><i
-					class="material-icons">web</i>Pagina de Sistemas</a></li>
+					class="material-icons">web</i>IngSistemas</a></li>
 			<li>
 				<div class="divider"></div>
 			</li>
@@ -120,7 +120,8 @@
 	<!--SLIDER PRINCIPAL-->
 	<div class="slider" style="margin-top: 18px;">
 		<ul class="slides">
-			<li><img src="resources/encasa.jpeg" class="responsive-img"> <!-- random image -->
+			<li><img src="resources/encasa.jpeg" class="responsive-img">
+				<!-- random image -->
 				<div class="caption right-align">
 					<c:forEach var="noti" begin="0" end="0"
 						items="${notidestDao.list()}">
@@ -324,9 +325,10 @@
 	<!--GRADUADO DESTACADO-->
 	<h2 class="center-align">GRADUADOS DESTACADOS</h2>
 	<div class="container row">
-		<div id="gradest" class="col l3 card card-panel hoverable">
+		<div id="gradest" class="col l3 s6 card card-panel hoverable">
 			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
+				<img class="activator" src="resources/perfil_photo.png" width="412"
+					height="195">
 			</div>
 			<div class="card-content">
 				<c:forEach var="g" begin="0" end="0" items="${graDao.list()}">
@@ -349,9 +351,10 @@
 				</c:forEach>
 			</div>
 		</div>
-		<div id="gradest" class="col l3 card card-panel hoverable">
+		<div id="gradest" class="col l3 s6 card card-panel hoverable">
 			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
+				<img class="activator" src="resources/perfil_photo.png" width="412"
+					height="195">
 			</div>
 			<div class="card-content">
 				<c:forEach var="g" begin="1" end="1" items="${graDao.list()}">
@@ -374,9 +377,10 @@
 				</c:forEach>
 			</div>
 		</div>
-		<div id="gradest" class="col l3 card card-panel hoverable">
+		<div id="gradest" class="col l3 s6 card card-panel hoverable">
 			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
+				<img class="activator" src="resources/perfil_photo.png" width="412"
+					height="195">
 			</div>
 			<div class="card-content">
 				<c:forEach var="g" begin="2" end="2" items="${graDao.list()}">
@@ -400,9 +404,10 @@
 			</div>
 		</div>
 
-		<div id="gradest" class="col l3 card card-panel hoverable">
+		<div id="gradest" class="col l3 s6 card card-panel hoverable">
 			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="https://picsum.photos/id/291/412/310">
+				<img class="activator" src="resources/perfil_photo.png" width="412"
+					height="195">
 			</div>
 			<div class="card-content">
 				<c:forEach var="g" begin="3" end="3" items="${graDao.list()}">
