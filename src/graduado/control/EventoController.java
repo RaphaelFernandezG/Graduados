@@ -42,37 +42,32 @@ public class EventoController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Evento e = new Evento();
 		String id_eve = request.getParameter("ideve");
 		String nombre = request.getParameter("nombre");
 		String ciudad = request.getParameter("ciudad");
 		String lugar = request.getParameter("lugar");
-		
-		SimpleDateFormat parseDate = new SimpleDateFormat("dd/mm/yyyy");
-		
 		String fechaini = request.getParameter("fechaini");
 		String fechafin = request.getParameter("fechafin");
 		
-		Date ini;
-		Date fin;
 		
-		EventoDao eDao = new EventoDao();
+		Evento eve = new Evento();
+		eve.setCiudad(ciudad);
+		eve.setFechafin(fechafin);
+		eve.setFechaini(fechaini);
+		eve.setIdEve(id_eve);
+		eve.setLugar(lugar);
+		eve.setNombre(nombre);
 		
-		try {
-			ini = (Date)parseDate.parse(fechaini);
-			fin = (Date)parseDate.parse(fechafin);
-			e.setIdEve(id_eve);
-			e.setNombre(nombre);
-			e.setCiudad(ciudad);
-			e.setLugar(lugar);
-			e.setFechafin(fechafin);
-			e.setFechaini(fechaini);
-			eDao.insert(e);
-			RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
-			rd.forward(request, response);
-		} catch (Exception e2) {
-			// TODO: handle exception
-		}
+		
+		EventoDao eveDao = new EventoDao();
+		eveDao.insert(eve);
+		RequestDispatcher rd = request.getRequestDispatcher("eventos.jsp");
+		rd.forward(request, response);
+		
+		
+		
+		
+		
 	}
 
 }
