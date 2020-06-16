@@ -117,7 +117,7 @@
 							<h5>Video de Experiencia ${x.idExp}</h5>
 							<p>${x.descripcion}</p>
 							<div class="video-container">
-								<iframe width="400" height="200" src="${x.link}" frameborder="0"
+								<iframe width="400" height="200" src="//${x.link}" frameborder="0"
 									allowfullscreen></iframe>
 							</div>
 							<div class="divider"></div>
