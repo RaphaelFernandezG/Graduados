@@ -57,6 +57,8 @@ public class AdGraduadoController extends HttpServlet {
 		gd.setDescripcion(descripcion);
 		gd.setGraduado(g);
 		
+		
+		
 		GraddestacadoDao gdDao = new GraddestacadoDao();
 		gdDao.update(gd);
 		

@@ -331,13 +331,13 @@
 					height="195">
 			</div>
 			<div class="card-content">
-				<c:forEach var="g" begin="0" end="0" items="${graDao.list()}">
+				<c:forEach var="gd" begin="0" end="0" items="${gradestDao.list()}">
 					<tr>
 						<td><span
-							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+							class="card-title activator grey-text text-darken-4">${gd.graduado.nombre}<i
 								class="material-icons right">more_vert</i>
 						</span>
-							<p>${g.fechagrad}</p></td>
+							<p>${gd.graduado.fechagrad}</p></td>
 					</tr>
 				</c:forEach>
 			</div>
@@ -357,13 +357,13 @@
 					height="195">
 			</div>
 			<div class="card-content">
-				<c:forEach var="g" begin="1" end="1" items="${graDao.list()}">
+				<c:forEach var="gd" begin="1" end="1" items="${gradestDao.list()}">
 					<tr>
 						<td><span
-							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+							class="card-title activator grey-text text-darken-4">${gd.graduado.nombre}<i
 								class="material-icons right">more_vert</i>
 						</span>
-							<p>${g.fechagrad}</p></td>
+							<p>${gd.graduado.fechagrad}</p></td>
 					</tr>
 				</c:forEach>
 			</div>
@@ -383,13 +383,13 @@
 					height="195">
 			</div>
 			<div class="card-content">
-				<c:forEach var="g" begin="2" end="2" items="${graDao.list()}">
+				<c:forEach var="gd" begin="2" end="2" items="${gradestDao.list()}">
 					<tr>
 						<td><span
-							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+							class="card-title activator grey-text text-darken-4">${gd.graduado.nombre}<i
 								class="material-icons right">more_vert</i>
 						</span>
-							<p>${g.fechagrad}</p></td>
+							<p>${gd.graduado.fechagrad}</p></td>
 					</tr>
 				</c:forEach>
 			</div>
@@ -410,13 +410,13 @@
 					height="195">
 			</div>
 			<div class="card-content">
-				<c:forEach var="g" begin="3" end="3" items="${graDao.list()}">
+				<c:forEach var="gd" begin="3" end="3" items="${gradestDao.list()}">
 					<tr>
 						<td><span
-							class="card-title activator grey-text text-darken-4">${g.nombre}<i
+							class="card-title activator grey-text text-darken-4">${gd.graduado.nombre}<i
 								class="material-icons right">more_vert</i>
 						</span>
-							<p>${g.fechagrad}</p></td>
+							<p>${gd.graduado.fechagrad}</p></td>
 					</tr>
 				</c:forEach>
 			</div>
