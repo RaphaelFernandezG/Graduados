@@ -31,12 +31,12 @@
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/sysgradv1?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+				value="jdbc:mysql://sql10.freesqldatabase.com:3306/sql10348789?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
 			<property name="javax.persistence.jdbc.user"
-				value="root" />
+				value="sql10348789" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.password" value="PZuEqS6Sdg"/>
 		</properties>
 	</persistence-unit>
 </persistence>
