@@ -76,6 +76,11 @@
 				<article class="offset-s2 col s8 offset-s2">
 					<form action="ExperienciaController" parent="_blank" method="POST"
 						runat="server">
+						<div class="input-field">
+                            <i class="material-icons prefix">link</i>
+                            <label for="idexp">Identificador</label>
+                            <input type="text" name="idexp" required>
+                        </div>
 						<div class="input-field ">
                             <i class="material-icons prefix">person_pin</i>
                             <select name=gralist id=gralist>

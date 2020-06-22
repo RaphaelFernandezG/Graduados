@@ -210,9 +210,9 @@
 			<div class="col s2">
 				<a class="black-text" href="">
 					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="0" end="0" items="${evenDao.list()}">
+						<c:forEach var="n" begin="0" end="0" items="${evenprinDao.list()}">
 							<tr>
-								<td><c:out value="${n.nombre}" /></td>
+								<td><c:out value="${n.evento.nombre}" /></td>
 							</tr>
 						</c:forEach>
 					</h6>
@@ -227,9 +227,9 @@
 			<div class="col s2">
 				<a class="black-text" href="">
 					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="1" end="1" items="${evenDao.list()}">
+						<c:forEach var="n" begin="1" end="1" items="${evenprinDao.list()}">
 							<tr>
-								<td><c:out value="${n.nombre}" /></td>
+								<td><c:out value="${n.evento.nombre}" /></td>
 							</tr>
 						</c:forEach>
 					</h6>
@@ -244,9 +244,9 @@
 			<div class="col s2">
 				<a class="black-text" href="">
 					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="2" end="2" items="${evenDao.list()}">
+						<c:forEach var="n" begin="2" end="2" items="${evenprinDao.list()}">
 							<tr>
-								<td><c:out value="${n.nombre}" /></td>
+								<td><c:out value="${n.evento.nombre}" /></td>
 							</tr>
 						</c:forEach>
 					</h6>
@@ -261,9 +261,9 @@
 			<div class="col s2">
 				<a class="black-text" href="">
 					<h6 class="center flow-text ">
-						<c:forEach var="n" begin="3" end="3" items="${evenDao.list()}">
+						<c:forEach var="n" begin="3" end="3" items="${evenprinDao.list()}">
 							<tr>
-								<td><c:out value="${n.nombre}" /></td>
+								<td><c:out value="${n.evento.nombre}" /></td>
 							</tr>
 						</c:forEach>
 					</h6>
@@ -278,38 +278,37 @@
 	<h2 class="center-align">EXPERIENCIAS</h2>
 	<div class="container row">
 		<div class="col s8 l8">
-			<c:forEach var="e" begin="0" end="0" items="${experienciaDao.list()}">
+			<c:forEach var="ed" begin="0" end="0" items="${expdestDao.list()}">
 				<tr>
 					<td>
 						<div class="video-container">
-							<iframe width="853" height="480" src="//${e.link}?rel=0"
-								frameborder="0" allowfullscreen></iframe>
-						</div>
+								<iframe width="400" height="200" src="//${ed.experiencia.link}" frameborder="0"
+									allowfullscreen></iframe>
+							</div>
 					</td>
 				</tr>
 			</c:forEach>
 		</div>
-
 		<div class="col s4 l4 ">
 			<ul class="collection ">
-				<li class="collection-item "><c:forEach var="e" begin="1"
-						end="1" items="${experienciaDao.list()}">
+				<li class="collection-item "><c:forEach var="ed" begin="1"
+						end="1" items="${expdestDao.list()}">
 						<tr>
 							<td>
 								<div class="video-container">
-									<iframe width="853" height="480" src="//${e.link}?rel=0"
+									<iframe width="400" height="200" src="//${ed.experiencia.link}"
 										frameborder="0" allowfullscreen></iframe>
 								</div>
 							</td>
 						</tr>
 					</c:forEach></li>
 				<div>
-					<li class="collection-item "><c:forEach var="e" begin="2"
-							end="2" items="${experienciaDao.list()}">
+					<li class="collection-item "><c:forEach var="ed" begin="2"
+							end="2" items="${expdestDao.list()}">
 							<tr>
 								<td>
 									<div class="video-container">
-										<iframe width="853" height="480" src="//${e.link}?rel=0"
+										<iframe width="400" height="200" src="//${ed.experiencia.link}"
 											frameborder="0" allowfullscreen></iframe>
 									</div>
 								</td>
@@ -318,6 +317,8 @@
 				</div>
 			</ul>
 		</div>
+
+		
 	</div>
 
 	<div class="divider"></div>

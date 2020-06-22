@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +69,8 @@
             <div class="row card">
                 <h3 class="center-align">REGISTRO DE NOTICIA</h3>
                 <article class="offset-s2 col s8 offset-s2">
-                    <form method="POST" action="">
+                    <form action="NoticiaController" parent="_blank" method="POST"
+						runat="server">
 
                             <div class="input-field">
                                     <i class="material-icons prefix">my_location</i>

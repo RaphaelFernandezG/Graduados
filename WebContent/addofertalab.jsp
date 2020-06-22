@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +69,8 @@
             <div class="row card">
                 <h3 class="center-align">REGISTRO DE OFERTA LABORAL</h3>
                 <article class="offset-s2 col s8 offset-s2">
-                    <form method="POST" action="">
+                    <form action="OfertaLabController" parent="_blank" method="POST"
+						runat="server">
 
                         <div class="input-field">
                             <i class="material-icons prefix">business</i>
@@ -95,7 +99,7 @@
 
                         <div class="input-field">
                             <i class="material-icons prefix">visibility</i>
-                            <textarea id="descri" class="materialize-textarea" data-length="120"></textarea>
+                            <textarea id="descri" name="descri" class="materialize-textarea" data-length="120"></textarea>
                             <label id="descri" for="descri">Descripcion</label>
                         </div>
 

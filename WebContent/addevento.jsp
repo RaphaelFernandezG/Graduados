@@ -109,7 +109,7 @@
 
 						<div class="input-field">
 							<i class="material-icons prefix">date_range</i> <label
-								for="fechafin">Fecha de apertura</label> <input type="text"
+								for="fechafin">Fecha de cierre</label> <input type="text"
 								class="datepicker" name="fechafin">
 						</div>
 

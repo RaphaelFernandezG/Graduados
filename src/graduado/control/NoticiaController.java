@@ -9,22 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import graduado.entities.Experiencia;
-import graduado.entities.Graduado;
-import graduado.model.ExperienciaDao;
-import graduado.model.GraduadoDao;
+import graduado.entities.Noticia;
+import graduado.entities.Notide;
+import graduado.model.NoticiaDao;
 
 /**
- * Servlet implementation class ExperienciaController
+ * Servlet implementation class NoticiaController
  */
-@WebServlet("/ExperienciaController")
-public class ExperienciaController extends HttpServlet {
+@WebServlet("/NoticiaController")
+public class NoticiaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExperienciaController() {
+    public NoticiaController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,25 +41,30 @@ public class ExperienciaController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String id = request.getParameter("idexp");
-		String link = request.getParameter("video");
-		String descri = request.getParameter("descri");
-		String numdocum = request.getParameter("gralist");
-		
-		Experiencia exp = new Experiencia();
-		GraduadoDao gDao = new GraduadoDao();
-		Graduado g = gDao.find(numdocum);
+		String id = request.getParameter("ideve");
+		String descripcion = request.getParameter("descri");
+		String fecha = request.getParameter("fechanoti");
+		String ciudad = request.getParameter("ciudad");
+		String lugar = request.getParameter("lugar");
 		
 		
-		exp.setIdExp(id);
-		exp.setLink(link);
-		exp.setDescripcion(descri);
-		exp.setGraduado(g);
+		Noticia noti = new Noticia();
+		noti.setCiudad(ciudad);
+		noti.setDescripcion(descripcion);
+		noti.setFecha(fecha);
+		noti.setId(id);
+		noti.setLugar(lugar);
 		
-		ExperienciaDao eDao = new ExperienciaDao();
-		eDao.insert(exp);
-		RequestDispatcher rd = request.getRequestDispatcher("experiencias.jsp");
+		NoticiaDao notiDao = new NoticiaDao();
+		notiDao.insert(noti);
+		RequestDispatcher rd = request.getRequestDispatcher("noticias.jsp");
 		rd.forward(request, response);
+		
+		
+		
+		
+		
+		
 		
 		
 	}

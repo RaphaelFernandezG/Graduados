@@ -9,22 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import graduado.entities.Experiencia;
-import graduado.entities.Graduado;
-import graduado.model.ExperienciaDao;
-import graduado.model.GraduadoDao;
+import graduado.entities.Ofertalab;
+import graduado.model.OfertalabDao;
 
 /**
- * Servlet implementation class ExperienciaController
+ * Servlet implementation class OfertaLabController
  */
-@WebServlet("/ExperienciaController")
-public class ExperienciaController extends HttpServlet {
+@WebServlet("/OfertaLabController")
+public class OfertaLabController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExperienciaController() {
+    public OfertaLabController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,25 +40,28 @@ public class ExperienciaController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String id = request.getParameter("idexp");
-		String link = request.getParameter("video");
-		String descri = request.getParameter("descri");
-		String numdocum = request.getParameter("gralist");
-		
-		Experiencia exp = new Experiencia();
-		GraduadoDao gDao = new GraduadoDao();
-		Graduado g = gDao.find(numdocum);
+		String id = request.getParameter("idofertalab");
+		String cargo = request.getParameter("cargo");
+		String empresa = request.getParameter("empresa");
+		String salario = request.getParameter("salario");
+		String descripcion = request.getParameter("descri");
 		
 		
-		exp.setIdExp(id);
-		exp.setLink(link);
-		exp.setDescripcion(descri);
-		exp.setGraduado(g);
+		Ofertalab olab = new Ofertalab();
 		
-		ExperienciaDao eDao = new ExperienciaDao();
-		eDao.insert(exp);
-		RequestDispatcher rd = request.getRequestDispatcher("experiencias.jsp");
+		olab.setCargo(cargo);
+		olab.setDescripcion(descripcion);
+		olab.setEmpresa(empresa);
+		olab.setId(id);
+		olab.setSalario(salario);
+		
+		OfertalabDao olabDao = new OfertalabDao();
+		olabDao.insert(olab);
+		RequestDispatcher rd = request.getRequestDispatcher("ofertaslabs.jsp");
 		rd.forward(request, response);
+		
+	
+		
 		
 		
 	}
