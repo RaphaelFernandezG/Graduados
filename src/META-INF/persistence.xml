@@ -31,7 +31,7 @@
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://http://vestacp.ingsistemasufps.co/phpmyadmin/graduados_db1?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+				value="jdbc:mysql://ingsistemasufps.co:3306/graduados_db1" />
 			<property name="javax.persistence.jdbc.user"
 				value="graduados_gra1" />
 			<property name="javax.persistence.jdbc.driver"
