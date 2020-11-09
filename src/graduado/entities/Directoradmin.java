@@ -9,6 +9,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
+@Table(name="directoradmin")
 @NamedQuery(name="Directoradmin.findAll", query="SELECT d FROM Directoradmin d")
 public class Directoradmin implements Serializable {
 	private static final long serialVersionUID = 1L;
