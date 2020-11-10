@@ -25,7 +25,7 @@
 		<div class="navbar-fixed">
 			<nav class="nav-extended red darken-4 ">
 				<div class="nav-wrapper red darken-2 navbar-fixed">
-					<a id="logouno" href="#!" class="brand-logo flow-text truncate"><i
+					<a id="logouno" href="index.jsp" class="brand-logo flow-text truncate"><i
 						id="marghea" class="material-icons">school</i>Graduados ING.
 						SISTEMAS</a>
 				</div>
