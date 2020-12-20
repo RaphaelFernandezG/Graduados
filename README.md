@@ -1,6 +1,6 @@
 # Graduados
 
-Portal Graduados UFPS https://graduado.herokuapp.com/index.jsp
+Portal Graduados UFPS https://portalgraduados.herokuapp.com/index.jsp
 
 
 DB: 
